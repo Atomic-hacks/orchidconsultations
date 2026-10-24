@@ -81,7 +81,7 @@ export function HeroSlideshow() {
         </AnimatePresence>
       </motion.div>
       <div className="hero-bottom-rail">
-        <a className="hero-scroll-link" href="#services"><motion.span whileHover={reduced ? undefined : { y: 4 }}><ArrowDown size={19} strokeWidth={1.5} /></motion.span><span>Explore our services</span></a>
+        <a className="hero-scroll-link" href="#services"><span><ArrowDown size={19} strokeWidth={1.5} /></span><span>Explore our services</span></a>
         <div className="hero-controls">
           <button className="icon-button" onClick={() => step(-1)} aria-label="Previous hero slide"><ArrowLeft size={18} /></button>
           <div className="hero-pagination" aria-label="Choose hero slide">{slides.map((slide, slideIndex) => <button key={slide.title} aria-label={`Show slide ${slideIndex + 1}: ${slide.title}`} aria-current={slideIndex === index ? 'true' : undefined} onClick={() => select(slideIndex)}><span>{String(slideIndex + 1).padStart(2, '0')}</span><motion.i initial={false} animate={{ scaleX: slideIndex === index ? 1 : 0 }} transition={{ duration: reduced ? 0 : 0.5, ease }} /></button>)}</div>

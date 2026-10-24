@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import type { CSSProperties } from 'react';
 import type { MediaRatio } from '../data/images';
 import { transition } from '../lib/motion';
@@ -17,11 +17,9 @@ interface MediaProps {
   eager?: boolean;
 }
 
-export function Media({ src, alt, ratio = '16/9', caption, parallax = false, reveal = true, className = '', position = 'center', layoutId, eager = false }: MediaProps) {
+export function Media({ src, alt, ratio = '16/9', caption, reveal = true, className = '', position = 'center', layoutId, eager = false }: MediaProps) {
   const [loaded, setLoaded] = useState(false);
   const reduced = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['-3%', '3%']);
   const style = { '--media-ratio': ratio } as CSSProperties;
   return <figure className={`media ${loaded ? 'is-loaded' : ''} ${className}`} style={style}>
     <motion.div
@@ -39,11 +37,7 @@ export function Media({ src, alt, ratio = '16/9', caption, parallax = false, rev
         loading={eager ? 'eager' : 'lazy'}
         fetchPriority={eager ? 'high' : 'auto'}
         onLoad={() => setLoaded(true)}
-        initial={reveal && !reduced ? { scale: 1.16 } : false}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true, amount: 0.18 }}
-        transition={{ ...transition, duration: 0.9 }}
-        style={{ objectPosition: position, y: parallax && !reduced ? y : 0 }}
+        style={{ objectPosition: position }}
       />
     </motion.div>
     {caption && <figcaption>{caption}</figcaption>}

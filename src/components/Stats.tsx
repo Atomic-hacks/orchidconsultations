@@ -5,6 +5,7 @@ import type { IconName } from '../data/icons';
 import { IconBadge } from './IconBadge';
 import { SectionBackground } from './SectionBackground';
 import { Container, SectionHeader } from './SectionLayout';
+import { transition } from '../lib/motion';
 
 const stats: readonly { value: number; suffix: string; label: string; icon: IconName }[] = [
   { value: 50, suffix: '+', label: 'International markets', icon: 'Globe2' },
@@ -14,7 +15,7 @@ const stats: readonly { value: number; suffix: string; label: string; icon: Icon
 ];
 function StatItem({ value, suffix, label, icon }: typeof stats[number]) {
   const ref = useRef<HTMLDivElement>(null); const inView = useInView(ref, { once: true }); const reduced = useReducedMotion(); const [display, setDisplay] = useState(reduced ? value : 0);
-  useEffect(() => { if (!inView || reduced) return; const control = animate(0, value, { duration: .7, ease: [0.22, 1, 0.36, 1], onUpdate: latest => setDisplay(Math.round(latest)) }); return () => control.stop(); }, [inView, reduced, value]);
+  useEffect(() => { if (!inView || reduced) return; const control = animate(0, value, { ...transition, onUpdate: latest => setDisplay(Math.round(latest)) }); return () => control.stop(); }, [inView, reduced, value]);
   return <div className="stat-card-v2" ref={ref}><IconBadge icon={icon} dark /><strong>{display}{suffix}</strong><span>{label}</span></div>;
 }
 export function Stats() {
