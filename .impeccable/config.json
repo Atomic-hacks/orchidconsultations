@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-10-24T11:42:26.774Z",
+        "reason": "user confirmed: preserve the existing hero design; the remaining 3px one-sided border is scoped to the hero credentials treatment"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-10-24T11:51:01.979Z",
+        "reason": "user confirmed: latest finish brief explicitly permits the brand gradient on stat numbers and the thin eyebrow rule; gradient text is confined to .stat-card-v2 strong"
+      }
+    ]
+  }
+}
