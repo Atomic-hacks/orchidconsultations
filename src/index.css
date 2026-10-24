@@ -2781,3 +2781,17 @@ p { font-size:clamp(16px,1.15vw,18px); line-height:1.7; }
   .service-image-card { display:block!important; width:auto; scroll-snap-align:start; }
   .horizontal-hint { margin-top:18px; }
 }
+
+/* Full-bleed hero: keep the photographic composition within every viewport. */
+.full-bleed-hero { width:100%; }
+.full-bleed-hero .hero-editorial { min-width:0; }
+.full-bleed-hero .hero-copy { min-width:0; }
+.full-bleed-hero .hero-copy>div { width:100%; min-width:0; }
+.full-bleed-hero .hero-heading { overflow-wrap:anywhere; }
+@media(max-width:767px) {
+  .full-bleed-hero .hero-editorial { width:calc(100% - 36px); }
+  .full-bleed-hero .hero-copy { max-width:100%; }
+  .full-bleed-hero .hero-copy p { max-width:100%; }
+  .full-bleed-hero .hero-actions { width:100%; }
+  .full-bleed-hero .hero-bottom-rail { min-width:0; width:100%; }
+}
