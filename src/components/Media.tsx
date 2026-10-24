@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import type { CSSProperties } from 'react';
 import type { MediaRatio } from '../data/images';
-import { transition } from '../lib/motion';
+import { durations, transition } from '../lib/motion';
 
 interface MediaProps {
   src: string;
@@ -28,7 +28,7 @@ export function Media({ src, alt, ratio = '16/9', caption, reveal = true, classN
       initial={reveal && !reduced ? { clipPath: 'inset(0 0 100% 0)' } : false}
       whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
       viewport={{ once: true, amount: 0.18 }}
-      transition={{ ...transition, duration: 0.82 }}
+      transition={{ ...transition, duration: durations.slow }}
     >
       <motion.span className="media-skeleton" aria-hidden="true" initial={false} animate={{ opacity: loaded ? 0 : 1 }} transition={{ duration: reduced ? 0 : 0.35 }} />
       <motion.img
