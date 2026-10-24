@@ -21,7 +21,6 @@ import {
 } from "./components/Experience";
 import { curtain, transition } from "./lib/motion";
 import { services } from "./data/services";
-import { PartnerMarquee } from "./components/PartnerMarquee";
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
@@ -116,7 +115,6 @@ function Layout() {
           </motion.div>
         </AnimatePresence>
       </main>
-      {location.pathname !== "/" && location.pathname !== "/about" && <PartnerMarquee compact />}
       <Footer />
       <Preloader />
     </>
