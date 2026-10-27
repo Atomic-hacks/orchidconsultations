@@ -61,6 +61,8 @@ Locally bundled DM Sans Variable throughout. Headings use moderate weight and ba
 ## Layout
 **The Compact Spacing Rule.** Do not add whitespace. Preserve existing section padding or reduce it; visual hierarchy comes from alignment, typography and thin rules. Preserve the existing 1320px container and responsive grids. Section titles occupy the first column with optional actions alongside, avoiding empty label columns.
 
+Images reveal once on entry using a 0.95-second clip-path wipe with a restrained scale settle. Observe the enclosing figure, then load and reveal the image, so clipping never prevents lazy loading. The homepage opens with a one-second photographic wipe. Section leads and actions follow headings with short delays; service modules use a capped three-column stagger and animate filter reflow. Linked modules draw their top rule and move their arrow on hover or keyboard focus. Process images wipe when the active step changes. All spatial effects are bypassed for reduced-motion users.
+
 ## Elevation & Depth
 Flat surfaces and fine borders. Retain photographic overlays where needed for legibility; process and contact calls to action use solid navy. Testimonials use a pale reading surface.
 
@@ -68,6 +70,8 @@ Flat surfaces and fine borders. Retain photographic overlays where needed for le
 Square buttons and flat ruled feature lists. Filters use an underlined active state rather than filled pills. Existing form affordances and keyboard focus stay visible.
 
 ## Components
+Use `BrandLogo` for all company-brand placements (desktop navigation, mobile menu, footer and preloader). It references `/logo-nobg.png`, preserves the supplied colors and crops only transparent canvas margins through CSS. Navigation is white for logo contrast; the dark footer places the logo on a white panel.
+
 Shared section headings omit decorative index labels. Feature modules use top rules and open backgrounds. Statistics use solid white text. Keep existing routes, service search, filters, accordions, calculator and reduced-motion behavior. Lenis uses a subtle 0.45-second easing duration; reduced-motion users keep native scrolling.
 
 Mr David's team entry includes a Read more link directly to `/documents/david-okoh-profile.pdf`, opening in a new tab. Do not create a separate profile page.

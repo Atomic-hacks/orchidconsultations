@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { rise, stagger, word } from '../lib/motion';
 export function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reduced = useReducedMotion();
-  return <motion.div className={className} variants={rise} initial={reduced ? false : 'hidden'} whileInView="visible" viewport={{ once: true, amount: 0.12 }} transition={{ delay }}>{children}</motion.div>;
+  return <motion.div className={className} variants={rise} initial={reduced ? false : 'hidden'} whileInView="visible" viewport={{ once: true, amount: 0.12 }} transition={{ delay, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>{children}</motion.div>;
 }
 export function Heading({ children, as = 'h2', className = '' }: { children: string; as?: 'h1' | 'h2' | 'h3'; className?: string }) {
   const reduced = useReducedMotion();

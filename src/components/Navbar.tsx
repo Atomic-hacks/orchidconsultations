@@ -8,6 +8,7 @@ import {
   useScroll,
   useSpring,
 } from "motion/react";
+import { BrandLogo } from "./BrandLogo";
 import { Menu, X } from "lucide-react";
 import { navigation } from "../data/site";
 import { Button, TextLink } from "./Button";
@@ -41,7 +42,7 @@ function MobileMenu({ close }: { close: () => void }) {
     >
       <div className="menu-top">
         <Link className="wordmark" to="/" onClick={close} aria-label="Orchid Consultations home">
-          <img src="/logo-dark.svg" alt="Orchid Consultations" />
+          <BrandLogo />
         </Link>
         <button onClick={close} aria-label="Close menu" className="icon-button">
           <X strokeWidth={1.5} />
@@ -98,7 +99,7 @@ export function Navbar() {
             to="/"
             aria-label="Orchid Consultations home"
           >
-            <img src="/logo-dark.svg" alt="Orchid Consultations" className="h-15" />
+            <BrandLogo />
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {navigation.map((item) => (

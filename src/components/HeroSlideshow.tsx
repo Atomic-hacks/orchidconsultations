@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useTra
 import { Button } from './Button';
 import { images, serviceImages } from '../data/images';
 import { services } from '../data/services';
-import { heroImage, heroCopy } from '../lib/motion';
+import { ease, heroImage, heroCopy } from '../lib/motion';
 
 const finance = services.find(service => service.slug === 'access-to-finance')!;
 const software = services.find(service => service.slug === 'software-development')!;
@@ -55,7 +55,7 @@ export function HeroSlideshow() {
   }, [playing, reduced, visible]);
 
   return <section ref={ref} className="full-bleed-hero" aria-roledescription="carousel" aria-label="Orchid consulting services" onFocusCapture={() => setPlaying(false)} onPointerEnter={() => setPlaying(false)} onTouchStart={() => setPlaying(false)}>
-    <motion.div className="hero-backdrop" style={{ y: reduced ? 0 : imageY }}>
+    <motion.div className="hero-backdrop" initial={reduced ? false : { clipPath: 'inset(0% 0% 100% 0%)' }} animate={{ clipPath: 'inset(0% 0% 0% 0%)' }} transition={{ duration: reduced ? 0 : 1, ease }} style={{ y: reduced ? 0 : imageY }}>
       <AnimatePresence initial={false}>
         <motion.img key={active.image.src} src={active.image.src} alt={active.image.alt} variants={heroImage} initial={reduced ? false : 'enter'} animate="visible" exit={reduced ? undefined : 'exit'} fetchPriority={index === 0 ? 'high' : 'auto'} />
       </AnimatePresence>

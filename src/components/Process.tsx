@@ -28,7 +28,7 @@ export function Process() {
     <Container><SectionHeader index="04" label="How we work" icon="Workflow" title="A clear path from insight to delivery." lead="Ensuring successful project delivery and client satisfaction every time." dark />
       <div className="process-grid">
         <div className="process-visual-sticky">
-          <AnimatePresence mode="sync" initial={false}>{images.process.map((image, index) => index === active && <motion.img key={image.src} src={image.src} alt={image.alt} initial={reduced ? false : { opacity: 0, scale: 1.03 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: .99 }} transition={reduced ? { duration: 0 } : transition} />)}</AnimatePresence>
+          <AnimatePresence mode="sync" initial={false}>{images.process.map((image, index) => index === active && <motion.img key={image.src} src={image.src} alt={image.alt} initial={reduced ? false : { opacity: 1, scale: 1.04, clipPath: 'inset(0% 100% 0% 0%)' }} animate={{ opacity: 1, scale: 1, clipPath: 'inset(0% 0% 0% 0%)' }} exit={{ opacity: 0, scale: .99 }} transition={reduced ? { duration: 0 } : transition} />)}</AnimatePresence>
           <div className="process-progress" aria-hidden="true"><motion.span style={{ scaleX: reduced ? 1 : progress }} /></div>
           <p><span>0{active + 1}</span> / 04</p>
         </div>

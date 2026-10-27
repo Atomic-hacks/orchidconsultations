@@ -118,3 +118,39 @@ p { text-wrap:pretty; }
 .page-load-error { min-height:60vh; padding-block:160px 64px; }
 .page-load-error h1 { font-size:clamp(34px,4vw,54px); }
 .page-load-error p { margin-block:20px 28px; max-width:60ch; }
+
+/* Editorial motion: reveal the photograph; keep copy and controls readable. */
+.section-header-copy .section-lead p { max-width:62ch; margin-top:14px; color:var(--slate); font-size:16px; line-height:1.65; }
+.section-header-dark .section-lead p { color:#cfd7e4; }
+.testimonials-v2 .section-lead p { color:var(--slate); }
+.media-frame { background:#dce7ee; }
+.feature-card::after { content:""; position:absolute; top:0; left:0; width:100%; height:1px; background:var(--mark-deep); transform:scaleX(0); transform-origin:left; transition:transform .45s cubic-bezier(.22,1,.36,1); pointer-events:none; }
+.feature-card:has(a):hover::after,.feature-card:focus-within::after { transform:scaleX(1); }
+.feature-card-link>svg { transition:transform .35s cubic-bezier(.22,1,.36,1); }
+.feature-card a:hover .feature-card-link>svg,.feature-card a:focus-visible .feature-card-link>svg { transform:translate(3px,-3px); }
+.service-filters button { transition:color .2s,border-color .25s; }
+.profile-read-more span[aria-hidden] { transition:transform .3s; }
+.profile-read-more:hover span[aria-hidden],.profile-read-more:focus-visible span[aria-hidden] { transform:translate(3px,-3px); }
+@media(prefers-reduced-motion:reduce) {
+ .media-frame img,.section-background>img,.hero-backdrop,.feature-card { clip-path:none!important; transform:none!important; }
+ .feature-card::after,.feature-card-link>svg,.service-filters button,.profile-read-more span[aria-hidden] { transition:none; }
+ .feature-card a:hover .feature-card-link>svg,.feature-card a:focus-visible .feature-card-link>svg,
+ .profile-read-more:hover span[aria-hidden],.profile-read-more:focus-visible span[aria-hidden] { transform:none; }
+}
+
+/* Supplied full-color logo; crop canvas margins without altering the asset. */
+.brand-logo { position:relative; display:block; width:132px; aspect-ratio:1120/646; overflow:hidden; background:#fff; }
+.wordmark .brand-logo img,.preloader .brand-logo img { position:absolute; display:block; width:112%; height:auto; max-width:none; max-height:none; left:-7.14%; top:-44.74%; object-fit:initial; filter:none; }
+.wordmark>.brand-logo { color:initial; }
+.navbar,.navbar-over-hero,.nav-backdrop { background:#fff; color:var(--ink); border-color:var(--line); }
+.navbar .button-outline { color:var(--ink); border-color:#a8b5bf; }
+.navbar .button-outline .button-sweep { background:#e3edf4; }
+.navbar .icon-button { color:var(--ink); border-color:var(--line); }
+.footer-brand { max-width:200px; width:max-content; padding:10px; background:#fff; }
+.footer-brand .brand-logo { width:180px; }
+.menu-top .wordmark { background:#fff; padding:6px; }
+.menu-top .brand-logo { width:132px; }
+.preloader .brand-logo { width:240px; }
+@media(max-width:767px) {
+ .nav-inner .brand-logo { width:112px; }
+}
