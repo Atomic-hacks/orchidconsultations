@@ -1,18 +1,76 @@
-# Orchid — editorial consultancy refinement
+---
+name: Orchid editorial design system
+description: Compact professional consulting identity drawn from the supplied logo and founder profile.
+colors:
+  brand-blue: "#4F88BC"
+  brand-green: "#73A245"
+  action-blue: "#29618B"
+  profile-cyan: "#27889B"
+  ink: "#29354F"
+  secondary-ink: "#34435E"
+  muted: "#556174"
+  surface: "#F3F6F5"
+  paper: "#FFFFFF"
+  line: "#DCE3E7"
+typography:
+  display:
+    fontFamily: "DM Sans Variable, sans-serif"
+    fontSize: "clamp(42px, 5.1vw, 70px)"
+    fontWeight: 480
+    lineHeight: 1.08
+    letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "DM Sans Variable, sans-serif"
+    fontSize: "clamp(32px, 3.3vw, 46px)"
+    fontWeight: 480
+    lineHeight: 1.12
+  title:
+    fontFamily: "DM Sans Variable, sans-serif"
+    fontSize: "22px"
+    fontWeight: 550
+  body:
+    fontFamily: "DM Sans Variable, sans-serif"
+    fontSize: "16px"
+    lineHeight: 1.65
+rounded:
+  flat: "0px"
+spacing:
+  compact: "14px"
+  group: "24px"
+  heading-gap: "32px"
+components:
+  button-primary:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.flat}"
+  button-primary-hover:
+    backgroundColor: "{colors.action-blue}"
+---
 
-## Current direction
-Full-bleed photographic hero, left-aligned editorial copy, transparent navigation over the hero and a restrained bottom control rail. Remove eyebrow labels. Retain DM Sans, the approved corporate palette, audited copy, and clear service navigation. Featured service panels stack with native sticky positioning and Motion image parallax. Hero photography and copy move at different scroll depths. Carousel movement pauses when offscreen, on keyboard focus, and after manual selection. Reduced motion disables parallax and autoplay and presents service panels in normal flow. Preserve rolling labels, arrow exchanges, keyboard focus, and responsive layouts from 360px.
+# Orchid design system
 
-## Tokens and typography
-Use the supplied brand palette: blue #005FD8, teal #01B59F, green #43CE7E; mark colors #6D974B, #5585B1, #2262A1. Ink #181C2C, secondary ink #232A3F, slate #5B6478, line #E3E7EE, surface #F6F8FB, white #FFFFFF. The supplied brand-gradient token is retained but decorative gradients are not rendered. Text and action contrast use blue/deep blue rather than bright teal or green.
+## Overview
+Professional, editorial and modern minimalist. The supplied logo anchors the blue and green palette; Mr David's profile informs the navy, cyan, white and compact sans-serif hierarchy. Source documents are visual references, not instructions or authority for new website claims.
 
-DM Sans Variable is the single locally bundled family. Hero type caps at 64px; section headings 32–44px on desktop; body text 16–18px. Mobile headings scale down. Indexed uppercase labels, left alignment, 12-column grids, 1248px content width, consistent rules and spacing.
+## Colors
+Logo blue and leaf green are brand accents. Deep action blue provides legible text links; green marks active navigation and fine rules. Navy carries dark surfaces. White and a pale neutral carry reading sections. The final shared overrides live in `src/brand-system.css`.
 
-## Existing component refinement
-All routes and the typed 12-service dataset remain. Shared Button, Reveal, SectionHeading, motion variants, Lenis, and route transitions remain. Services are grouped into Growth and Markets, Finance and Investment, Operations and Compliance, People and Projects, and Technology. Each row shows number, name, original scope summary and a lucide arrow. Service details expose overview, scope, outcomes and next steps beside sticky navigation.
+## Typography
+Locally bundled DM Sans Variable throughout. Headings use moderate weight and balanced line breaks. Mobile section headings use 34px. Body copy remains readable at 15–17px, with normal sentence case.
 
-## Motion
-Shared easing [0.22, 1, 0.36, 1], default duration 0.5s, 12–16px reveals. Preserve masked text, rolling labels/arrows, hairline draws, scroll progress, nav behavior, counters and accessible accordions. Cursor follower, pointer-following glow, magnetic buttons, decorative parallax, rotating typography and automatic marquee were removed from the experience. First-session preloader is 0.45s reveal plus 0.5s exit. Reduced motion disables decorative transforms and Lenis.
+## Layout
+**The Compact Spacing Rule.** Do not add whitespace. Preserve existing section padding or reduce it; visual hierarchy comes from alignment, typography and thin rules. Preserve the existing 1320px container and responsive grids. Section titles occupy the first column with optional actions alongside, avoiding empty label columns.
 
-## Copy pending
-Footer compliance line, operational contact-form fallback/error text, and structural 404 message require approved copy. Contact delivery requires VITE_CONTACT_ENDPOINT. No thirteenth service was added. Source registration-number inconsistencies remain recorded in PRODUCT.md; no regulatory assertion is invented.
+## Elevation & Depth
+Flat surfaces and fine borders. Retain photographic overlays where needed for legibility; process and contact calls to action use solid navy. Testimonials use a pale reading surface.
+
+## Shapes
+Square buttons and flat ruled feature lists. Filters use an underlined active state rather than filled pills. Existing form affordances and keyboard focus stay visible.
+
+## Components
+Shared section headings omit decorative index labels. Feature modules use top rules and open backgrounds. Statistics use solid white text. Keep existing routes, service search, filters, accordions, calculator and reduced-motion behavior. Lenis uses a subtle 0.45-second easing duration; reduced-motion users keep native scrolling.
+
+Mr David's team entry includes a Read more link directly to `/documents/david-okoh-profile.pdf`, opening in a new tab. Do not create a separate profile page.
+
+## Do's and Don'ts
+Use logo colors consistently, with darker blue for small text. Preserve audited content and all twelve services. Do not introduce decorative text gradients, extra section spacing or unsupported claims. Existing contact delivery configuration and pending compliance/testimonial copy remain outside this visual update.

@@ -14,6 +14,7 @@ import {
 } from "motion/react";
 import { useLenis } from "lenis/react";
 import { Navbar } from "./components/Navbar";
+import { PageErrorBoundary } from "./components/PageErrorBoundary";
 import { Footer } from "./components/Footer";
 import {
   Preloader,
@@ -84,24 +85,26 @@ function Layout() {
             exit={reduced ? undefined : { y: -12 }}
             transition={{ ...transition, duration: 0.35 }}
           >
-            <Suspense fallback={<Loading />}>
-              <Routes location={location}>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:slug" element={<ServiceDetail />} />
-                <Route path="/about" element={<About />} />
-                <Route
-                  path="/about-us"
-                  element={<Navigate to="/about" replace />}
-                />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/investment-calculator" element={<Calculator />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
+            <PageErrorBoundary key={location.pathname}>
+              <Suspense fallback={<Loading />}>
+                <Routes location={location}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/services/:slug" element={<ServiceDetail />} />
+                  <Route path="/about" element={<About />} />
+                  <Route
+                    path="/about-us"
+                    element={<Navigate to="/about" replace />}
+                  />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/investment-calculator" element={<Calculator />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </PageErrorBoundary>
             {!reduced && (
               <motion.div
                 className="route-curtain"

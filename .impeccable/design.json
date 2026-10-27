@@ -1,0 +1,20 @@
+{
+  "name": "Orchid editorial design system",
+  "source": "src/brand-system.css",
+  "colors": {
+    "brand-blue": "#4F88BC",
+    "brand-green": "#73A245",
+    "action-blue": "#29618B",
+    "profile-cyan": "#27889B",
+    "ink": "#29354F",
+    "muted": "#556174",
+    "surface": "#F3F6F5",
+    "paper": "#FFFFFF",
+    "line": "#DCE3E7"
+  },
+  "extensions": {
+    "density": "Preserve or reduce existing spacing; no additional whitespace",
+    "profile": "Direct PDF read-more link under CEO details",
+    "motion": "Retain existing reduced-motion-aware transitions"
+  }
+}

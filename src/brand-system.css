@@ -1,0 +1,120 @@
+/* Logo: sampled #4F88BC / #73A245. Profile: navy, cyan, white,
+   compact sans-serif hierarchy. Spacing is preserved or reduced. */
+:root {
+  --brand-blue: #4f88bc;
+  --brand-green: #73a245;
+  --brand-teal: #27889b;
+  --mark-green: #73a245;
+  --mark-steel: #4f88bc;
+  --mark-deep: #29618b;
+  --brand-gradient: #4f88bc;
+  --ink: #29354f;
+  --ink-2: #34435e;
+  --slate: #556174;
+  --muted: #556174;
+  --accent: #29618b;
+  --line: #dce3e7;
+  --surface: #f3f6f5;
+  --color-ink: #29354f;
+  --color-orchid: #29618b;
+}
+::selection { background:#dbe9d0; color:#29354f; }
+::-webkit-scrollbar-thumb { background:#4f88bc; }
+h1,h2,h3 { text-wrap:balance; letter-spacing:-.025em; }
+h1,h2 { font-weight:480; }
+p { text-wrap:pretty; }
+.navbar { background:var(--ink); }
+.navbar-over-hero { background:rgb(41 53 79 / 94%); }
+.nav-backdrop { background:var(--ink); backdrop-filter:none; }
+.active-line,.scroll-progress { background:var(--brand-green); }
+.nav-inner { height:90px; }
+.navbar .wordmark img { height:48px; }
+.button-dark { background:var(--ink); }
+.button-dark .button-sweep { background:var(--mark-deep); }
+.button-light .button-sweep,.button-outline .button-sweep { background:#e3edf4; }
+.button-outline { border-color:#a8b5bf; }
+.signature-button { border-radius:0; font-weight:550; }
+.section-header { grid-template-columns:minmax(0,1fr) auto; gap:24px; margin-bottom:32px; }
+.section-header-copy,.catalog-group-v2 .section-header-copy,
+.service-detail-main .section-header-copy { grid-column:1; max-width:820px; }
+.section-header-aside { grid-column:2; align-self:end; }
+.section-header-copy h2,.intro-copy-v2 .section-header-copy h2,
+.about-story-v2 .section-header-copy h2,.about-places-v2 .section-header-copy h2,
+.service-detail-main .section-header-copy h2 { font-size:clamp(32px,3.3vw,46px); line-height:1.12; font-weight:480; }
+.section-header-copy>p { margin-top:14px; }
+.page-kicker,.index-label { display:none; }
+.full-bleed-hero { min-height: min(800px,100svh); }
+.full-bleed-hero .hero-heading { font-size:clamp(42px,5.1vw,70px); line-height:1.08; max-width:900px; }
+.full-bleed-hero .hero-copy { padding-bottom:56px; }
+.full-bleed-hero .hero-copy p { max-width:64ch; }
+.hero-shade { background:linear-gradient(90deg,rgb(29 43 65 / 90%),rgb(29 43 65 / 64%) 55%,rgb(29 43 65 / 30%)); }
+.full-bleed-hero .button-dark { background:#fff; color:var(--ink); }
+.full-bleed-hero .button-dark .button-sweep { background:#dce9d1; }
+.feature-card-grid { gap:0 28px; }
+.feature-card { border:0; border-top:1px solid var(--line); border-radius:0; background:transparent; min-height:220px; }
+.feature-card>a,.feature-card:not(:has(>a)) { padding:22px 0; }
+.feature-card-top { margin-bottom:20px; }
+.feature-card h3 { font-size:22px; font-weight:550; }
+.feature-card p { margin-top:10px; }
+.feature-card-link { color:var(--mark-deep); padding-top:20px; }
+.feature-icon { color:var(--mark-deep); }
+.feature-icon-dark { color:#fff; }
+.service-card-grid .feature-card { min-height:280px; }
+.service-filters { gap:0 20px; border-bottom:1px solid var(--line); }
+.service-filters button { border:0; border-bottom:2px solid transparent; border-radius:0; background:transparent; padding:12px 0; color:var(--slate); }
+.service-filters button.is-active { background:transparent; border-color:var(--brand-green); color:var(--ink); }
+.service-filters button:hover { color:var(--mark-deep); }
+.intro-stat { background:var(--ink); }
+.process-section-v2 { background:var(--ink); }
+.process-backdrop,.process-backdrop-shade { display:none; }
+.process-step-head>span { color:#c5d7e2; }
+.process-progress span { background:var(--brand-green); }
+.process-visual-sticky { border-radius:0; }
+.stat-card-v2 strong { background:none; background-clip:border-box; -webkit-background-clip:border-box; color:#fff; font-weight:550; }
+.stats-grid-v2 { border-radius:0; }
+.stats-grid-v2 .feature-icon { color:#b9d79b; }
+.testimonials-v2 { background:#eaf0f3; color:var(--ink); }
+.testimonials-v2>img,.testimonials-v2>.section-background-shade { display:none; }
+.testimonials-v2 .section-header-dark { color:var(--ink); }
+.testimonials-v2 .section-header-copy>p { color:var(--slate); }
+.testimonials-v2 .carousel-controls button { border-color:#a8b5bf; }
+.testimonials-v2 .carousel-controls span { color:var(--slate); }
+.testimonial-card { background:transparent; border:0; border-top:1px solid #b9c8d2; border-radius:0; padding:24px 0; }
+.testimonial-card>svg { color:var(--mark-deep); }
+.testimonial-card blockquote { font-size:clamp(21px,2vw,28px); font-weight:450; }
+.home-cta-v2 { background:var(--ink); }
+.home-cta-v2>img,.home-cta-v2>.section-background-shade { display:none; }
+.page-hero-v2 .section-background-content { min-height:460px; padding-bottom:48px; }
+.page-hero-v2 .section-background-shade { background:rgb(29 43 65 / 84%); }
+.contact-form-panel { border:0; border-top:1px solid var(--line); border-radius:0; padding:24px 0; }
+.contact-card-grid { border-radius:0; }
+.capability-grid .feature-card p,.benefit-grid .feature-card p { color:var(--slate); text-transform:none; letter-spacing:0; font-size:15px; }
+.service-detail-main .section-header { grid-template-columns:minmax(0,1fr) auto; }
+.profile-read-more { display:inline-flex; gap:14px; align-items:center; margin-top:18px; padding-block:10px; color:var(--mark-deep); border-bottom:1px solid var(--brand-green); font-size:14px; font-weight:550; }
+.profile-read-more:hover { color:var(--ink); border-color:var(--ink); }
+.footer { background:var(--ink); }
+@media(max-width:1100px) {
+ .section-header-aside { grid-column:2; }
+ .section-header-copy { grid-column:1; }
+}
+@media(max-width:767px) {
+ .nav-inner { height:76px; }
+ .navbar .wordmark img { height:42px; }
+ .full-bleed-hero { min-height:700px; }
+ .full-bleed-hero .hero-heading { font-size:clamp(38px,10vw,54px); }
+ .full-bleed-hero .hero-copy { padding-bottom:40px; }
+ .section-header { display:block; margin-bottom:28px; }
+ .section-header-copy h2,.intro-copy-v2 .section-header-copy h2,
+ .about-story-v2 .section-header-copy h2,.about-places-v2 .section-header-copy h2,
+ .service-detail-main .section-header-copy h2 { font-size:34px; }
+ .section-header-aside { margin-top:20px; }
+ .feature-card,.service-card-grid .feature-card { min-height:0; }
+ .feature-card-link { margin-top:18px; }
+ .page-hero-v2 .section-background-content { min-height:420px; }
+ .page-hero-v2 h1 { font-size:40px; }
+ .service-detail-main .section-header { display:block; }
+}
+
+.page-load-error { min-height:60vh; padding-block:160px 64px; }
+.page-load-error h1 { font-size:clamp(34px,4vw,54px); }
+.page-load-error p { margin-block:20px 28px; max-width:60ch; }

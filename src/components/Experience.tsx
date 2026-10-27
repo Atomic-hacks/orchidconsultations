@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { transition } from '../lib/motion';
 export function SmoothScroll({ children }: { children: ReactNode }) {
   const reduced = useReducedMotion();
-  return reduced ? <>{children}</> : <ReactLenis root options={{ autoRaf: true, duration: 1.1, smoothWheel: true, anchors: true }}>{children}</ReactLenis>;
+  return reduced ? <>{children}</> : <ReactLenis root options={{ autoRaf: true, duration: 0.45, smoothWheel: true, anchors: true }}>{children}</ReactLenis>;
 }
 export function Preloader() {
   const reduced = useReducedMotion();
