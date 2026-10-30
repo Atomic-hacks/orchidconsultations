@@ -154,3 +154,40 @@ p { text-wrap:pretty; }
 @media(max-width:767px) {
  .nav-inner .brand-logo { width:112px; }
 }
+
+/* Mobile browsing: scan the catalogue, then open a service for its full scope. */
+@media (max-width:767px) {
+ .service-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 18px; }
+ .service-card-grid>div { min-width:0; }
+ .service-card-grid .feature-card { height:100%; }
+ .service-card-grid .feature-card>a { padding:16px 0; }
+ .service-card-grid .feature-card-top { margin-bottom:12px; }
+ .service-card-grid .feature-card-top .feature-icon { width:28px; height:28px; }
+ .service-card-grid .feature-card h3 { font-size:17px; line-height:1.3; text-wrap:wrap; overflow-wrap:anywhere; }
+ .service-card-grid .feature-card p { display:none; }
+ .service-card-grid .feature-card-link { margin-top:auto; padding-top:16px; font-size:12px; gap:6px; }
+ .service-card-grid .feature-card-link svg { width:16px; flex-shrink:0; }
+ .service-filters { flex-wrap:wrap; gap:0 18px; }
+ .service-filters button { min-height:44px; font-size:13px; white-space:normal; text-align:left; }
+ .catalog-group-v2 { margin-top:28px; }
+ .catalog-group-v2 .section-header { margin-bottom:16px; }
+ .catalog-group-v2 .section-header-copy h2 { font-size:25px; }
+ .catalog-toolbar { gap:16px; flex-wrap:wrap; }
+ .catalog-toolbar .search-field { width:100%; min-width:0; }
+ .process-grid { margin-top:0; }
+ .process-grid>.process-visual-sticky { display:none; }
+ .process-grid>.process-step-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 20px; padding:0; border:0; }
+ .process-step { padding:18px 0; justify-content:flex-start; }
+ .process-step-head { margin-bottom:14px; }
+ .process-step h3 { font-size:20px; line-height:1.25; }
+ .process-step>p { margin-top:10px; font-size:14px; line-height:1.6; }
+ .why-grid-v2,.capability-grid,.benefit-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 18px; }
+ .why-grid-v2 .feature-card,.capability-grid .feature-card,.benefit-grid .feature-card { padding:18px 0; }
+ .why-grid-v2 .feature-card-top,.capability-grid .feature-card-top,.benefit-grid .feature-card-top { margin-bottom:14px; }
+ .why-grid-v2 .feature-card h3,.capability-grid .feature-card h3,.benefit-grid .feature-card h3 { font-size:18px; }
+ .why-grid-v2 .feature-card p { font-size:14px; line-height:1.6; }
+ .capability-grid .feature-card p,.benefit-grid .feature-card p { display:none; }
+ .quick-facts { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .quick-facts>div { padding:14px 10px; border-bottom:0; }
+ .quick-facts span { font-size:12px; }
+}

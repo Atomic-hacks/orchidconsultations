@@ -1,6 +1,6 @@
 import type { IconFeature, IconName } from './icons';
 
-/** Preserved from the audited public website. No thirteenth service was published. */
+/** Service catalogue, updated to reflect the current offerings. */
 interface RawService {
   readonly number: string;
   readonly slug: string;
@@ -32,69 +32,6 @@ const serviceCopy = [
       "End-to-end regulatory compliance guidance"
     ],
     "source": "https://www.orchiddigitalconsulting.com/services/access-to-market"
-  },
-  {
-    "number": "02",
-    "slug": "entrepreneurship-training",
-    "title": "Entrepreneurship Training",
-    "intro": "Equipping aspiring and growing entrepreneurs with the practical skills, mindset, and support needed to build sustainable businesses.",
-    "capabilities": [
-      "Idea creation, refinement, and validation",
-      "Practical leadership and management training",
-      "Financial mastery for investor attraction",
-      "Growth-driving marketing and sales strategies",
-      "Tech adoption for operational efficiency",
-      "Access to mentor and industry networks"
-    ],
-    "benefits": [
-      "Practical, industry-relevant curriculum",
-      "Track record of successful business growth",
-      "Ongoing mentorship beyond training",
-      "Access to valuable expert networks"
-    ],
-    "source": "https://www.orchiddigitalconsulting.com/services/entrepreneurship-training"
-  },
-  {
-    "number": "03",
-    "slug": "facility-management",
-    "title": "Facility Management",
-    "intro": "Keep your assets, systems, and operations working smoothly together so you can focus on growing your business without disruptions.",
-    "capabilities": [
-      "Proactive asset management and planning",
-      "Smart system integration for reliability",
-      "Day-to-day operational efficiency boosts",
-      "Resource optimization to control costs",
-      "Safety standards and regulatory compliance",
-      "Predictive maintenance for asset longevity"
-    ],
-    "benefits": [
-      "Significantly lower operational costs",
-      "Reliable systems with minimal downtime",
-      "24/7 monitoring and issue escalation",
-      "Proactive asset lifespan extension"
-    ],
-    "source": "https://www.orchiddigitalconsulting.com/services/facility-management"
-  },
-  {
-    "number": "04",
-    "slug": "insurance-audit-tax",
-    "title": "Insurance / Audit and Tax Clearance",
-    "intro": "Taking the complexity out of insurance, audits, and tax matters so you can operate with confidence and financial soundness.",
-    "capabilities": [
-      "Insurance coverage assessment and review",
-      "Financial audits and compliance checks",
-      "Smart tax planning and risk reduction",
-      "Ongoing regulatory alignment support",
-      "Risk identification and mitigation",
-      "Audit-ready documentation and reporting"
-    ],
-    "benefits": [
-      "Confidence in meeting all regulations",
-      "Reduced liabilities and improved cash flow",
-      "Experienced guidance through audits",
-      "Well-structured protective risk coverage"
-    ],
-    "source": "https://www.orchiddigitalconsulting.com/services/insurance-audit-tax"
   },
   {
     "number": "05",
@@ -182,8 +119,8 @@ const serviceCopy = [
   {
     "number": "09",
     "slug": "sourcing-of-goods-and-services",
-    "title": "Sourcing of Goods and Services",
-    "intro": "We handle the complexity of finding the right suppliers and managing procurement so you get the best quality at the right price.",
+    "title": "Business Linkage",
+    "intro": "We connect your business with suppliers and partners, helping you build relationships and source the goods and services you need.",
     "capabilities": [
       "Reliable supplier identification and vetting",
       "Negotiation for better pricing and terms",
@@ -275,9 +212,6 @@ export interface Service {
 
 const serviceIcons: Record<ServiceSlug, IconName> = {
   'access-to-market': 'Globe2',
-  'entrepreneurship-training': 'GraduationCap',
-  'facility-management': 'Building2',
-  'insurance-audit-tax': 'ShieldCheck',
   'software-development': 'MonitorCog',
   'access-to-finance': 'Landmark',
   investment: 'TrendingUp',
@@ -289,8 +223,9 @@ const serviceIcons: Record<ServiceSlug, IconName> = {
 };
 
 const capabilityIcons: readonly IconName[] = ['Compass', 'Handshake', 'Workflow', 'Route', 'FileCheck2', 'BarChart3'];
-export const services: readonly Service[] = serviceCopy.map(service => ({
+export const services: readonly Service[] = serviceCopy.map((service, index) => ({
   ...service,
+  number: String(index + 1).padStart(2, '0'),
   icon: serviceIcons[service.slug],
   capabilities: service.capabilities.map((text, index) => ({ text, icon: capabilityIcons[index % capabilityIcons.length] })),
   benefits: service.benefits.map(text => ({ text, icon: 'Check' as const })),
@@ -300,8 +235,8 @@ export const services: readonly Service[] = serviceCopy.map(service => ({
 
 export const serviceGroups = [
   { title: 'Market and Growth', slugs: ['access-to-market', 'support'] },
-  { title: 'Finance', slugs: ['access-to-finance', 'investment', 'loan', 'insurance-audit-tax'] },
-  { title: 'Operations', slugs: ['facility-management', 'sourcing-of-goods-and-services', 'project-management'] },
-  { title: 'People and Training', slugs: ['entrepreneurship-training', 'hr-training-and-management'] },
+  { title: 'Finance', slugs: ['access-to-finance', 'investment', 'loan'] },
+  { title: 'Operations', slugs: ['sourcing-of-goods-and-services', 'project-management'] },
+  { title: 'People and Training', slugs: ['hr-training-and-management'] },
   { title: 'Technology', slugs: ['software-development'] },
 ] as const;

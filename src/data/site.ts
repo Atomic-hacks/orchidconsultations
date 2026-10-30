@@ -4,6 +4,7 @@ export const navigation = [
   { label: 'Team', to: '/team' }, { label: 'FAQ', to: '/faq' },
 ] as const;
 export const contact = {
+  whatsapp: 'https://wa.me/message/F4SVLZIKATXML1',
   email: 'info@orchiddigitalconsulting.com', phone: '09077251862', tel: '+2349077251862',
   address: 'NO 314 Peter Odili Extension by Old Refinery Road Opposite Genesis Fastfood, Port Harcourt, Rivers State.',
   hours: 'Monday - Friday: 08:00 AM – 06:00 PM', weekend: 'Saturday & Sunday: Closed',
@@ -15,7 +16,7 @@ export const socialLinks = [
   { label: 'X (Twitter)', href: 'https://twitter.com/Orchiddigitale1' },
   { label: 'Facebook', href: 'https://web.facebook.com/Orchiddigitaledc-635826767038728' },
   { label: 'YouTube', href: 'https://m.youtube.com/channel/UCs-A6_ceAfUXl7M8OgPw-YQ' },
-  { label: 'WhatsApp', href: 'https://api.whatsapp.com/send?phone=+2349077251862&text=Hello%20Orchiddigital%21' },
+  { label: 'WhatsApp', href: contact.whatsapp },
 ].filter(link => link.href);
 export const process = [
   { title: 'Discovery & Assessment', text: 'We conduct a comprehensive analysis of your business needs, challenges, and growth opportunities.', icon: 'SearchCheck' },
