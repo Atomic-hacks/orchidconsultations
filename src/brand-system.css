@@ -211,9 +211,8 @@ p { text-wrap:pretty; }
 .footer-brand .brand-logo img { filter:brightness(0) invert(1); }
 .footer-credentials { padding:20px 0; border-top:1px solid rgb(255 255 255 / 18%); }
 .footer-license { display:inline-flex; align-items:center; gap:16px; color:#fff; }
-.footer-license>img { display:block; width:80px; height:80px; object-fit:contain; }
+.footer-license>img { display:block; width:80px; height:80px; flex:none; border-radius:50%; object-fit:contain; }
 .footer-license>span { font-size:14px; line-height:1.5; }
-.footer-license>span>span { display:flex; align-items:center; gap:6px; margin-top:4px; color:#cfd7e4; font-size:12px; text-decoration:underline; text-underline-offset:4px; }
 
 .event-gallery-page { padding-top:calc(var(--header-offset) + 40px); }
 .gallery-heading h1 { font-size:clamp(40px,5vw,64px); line-height:1.1; }

@@ -1,5 +1,5 @@
 import { BrandLogo } from "./BrandLogo";
-import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useReducedMotion } from "motion/react";
 import { useLenis } from "lenis/react";
@@ -99,10 +99,10 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-credentials">
-          <a className="footer-license" href="/liscence.jpg" target="_blank" rel="noreferrer" aria-label="View the supplied money lending and SCUML licence image (opens in a new tab)">
+          <div className="footer-license">
             <img src="/liscence.jpg" alt="Licensed — Money Lending and SCUML Certified" width="1080" height="1080" loading="lazy" />
-            <span>Money Lending &amp; SCUML<span>View licence image <ArrowUpRight size={14} aria-hidden="true" /></span></span>
-          </a>
+            <span>Money Lending &amp; SCUML</span>
+          </div>
         </div>
         <div className="footer-bottom">
           <p>
