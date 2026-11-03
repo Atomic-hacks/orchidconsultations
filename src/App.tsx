@@ -31,6 +31,7 @@ const Team = lazy(() => import("./pages/Team"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Calculator = lazy(() => import("./pages/Calculator"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const EventGallery = lazy(() => import("./pages/EventGallery"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 function Loading() {
   return (
@@ -60,6 +61,7 @@ function Layout() {
         "/contact": "Contact",
         "/faq": "FAQ",
         "/privacy": "Privacy Policy",
+        "/event-gallery": "Event Gallery",
         "/services": "Services",
         "/investment-calculator": "Investment Calculator",
       }[location.pathname] ??
@@ -101,6 +103,7 @@ function Layout() {
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/investment-calculator" element={<Calculator />} />
                   <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/event-gallery" element={<EventGallery />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

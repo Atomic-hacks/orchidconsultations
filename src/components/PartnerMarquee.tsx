@@ -4,11 +4,11 @@ import { partners } from '../data/partners';
 import { clients } from '../data/clients';
 
 const Marquee = (MarqueeImport as unknown as { default: typeof MarqueeImport }).default;
-type Mark = { readonly name: string; readonly image?: string; readonly imageAlt?: string };
+type Mark = { readonly name: string; readonly image?: string; readonly imageAlt?: string; readonly imageTone?: 'dark'; readonly imageScale?: number };
 
 function LogoBox({ item, showName = false }: { item: Mark; showName?: boolean }) {
-  return <div className={`logo-box${item.image ? ' has-image' : ''}`} aria-label={item.name}>{item.image
-    ? <><img src={item.image} alt={item.imageAlt ?? `${item.name} logo`} width="144" height="48" loading="lazy" />{showName && <span>{item.name}</span>}</>
+  return <div className={`logo-box${item.image ? ' has-image' : ''}${item.imageTone === 'dark' ? ' logo-on-dark' : ''}`} aria-label={item.name}>{item.image
+    ? <><div className="logo-image"><img src={item.image} alt={item.imageAlt ?? `${item.name} logo`} width="180" height="80" loading="lazy" style={{ transform: `scale(${item.imageScale ?? 1})` }} /></div>{showName && <span>{item.name}</span>}</>
     : <span>{item.name}</span>}</div>;
 }
 function LogoSet({ items, showNames = false }: { items: readonly Mark[]; showNames?: boolean }) {
@@ -16,8 +16,8 @@ function LogoSet({ items, showNames = false }: { items: readonly Mark[]; showNam
 }
 export function PartnerMarquee({ compact = false, directory = false }: { compact?: boolean; directory?: boolean }) {
   const reduced = useReducedMotion();
-  const partnerMarks = partners.map(({ name, logo }) => ({ name, image: logo }));
-  const clientMarks = clients.map(({ name, image, imageAlt }) => ({ name, image, imageAlt }));
+  const partnerMarks = partners.map(({ name, logo, logoTone, logoScale }) => ({ name, image: logo, imageTone: logoTone, imageScale: logoScale }));
+  const clientMarks = clients.map(({ name, image, imageAlt, imageTone, imageScale }) => ({ name, image, imageAlt, imageTone, imageScale }));
   if (directory) return <section className="organisation-directory" aria-label="Partners and clients"><div className="site-container">
     <div className="organisation-group"><h2>Partners</h2><LogoSet items={partnerMarks} showNames /></div>
     {!compact && <div className="organisation-group"><h2>Clients</h2><LogoSet items={clientMarks} showNames /></div>}

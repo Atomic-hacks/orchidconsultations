@@ -2,6 +2,7 @@ export const navigation = [
   { label: 'About', to: '/about' }, { label: 'Services', to: '/services' },
   { label: 'Investment Calculator', to: '/investment-calculator' },
   { label: 'Team', to: '/team' }, { label: 'FAQ', to: '/faq' },
+  { label: 'Event Gallery', to: '/event-gallery' },
 ] as const;
 export const contact = {
   whatsapp: 'https://wa.me/message/F4SVLZIKATXML1',
