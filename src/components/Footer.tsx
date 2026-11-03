@@ -89,9 +89,10 @@ export function Footer() {
             </p>
             <div className="footer-socials">
               {socialLinks.map((l) => (
-                <TextLink key={l.label} href={l.href}>
-                  {l.label}
-                </TextLink>
+                <a key={l.label} href={l.href} className="footer-social-link">
+                  <img src={l.icon} alt="" aria-hidden="true" width="18" height="18" />
+                  <span>{l.label}</span>
+                </a>
               ))}
             </div>
           </div>

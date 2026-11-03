@@ -292,3 +292,7 @@ p { text-wrap:pretty; }
 .feedback-info a { overflow-wrap:anywhere; color:var(--mark-deep); }
 .feedback-page .contact-form { margin-top:24px; }
 .feedback-page .form-success { min-height:0; gap:20px; }
+.footer-socials { gap:4px 18px; }
+.footer-social-link { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:#d2d8e3; font-size:12px; }
+.footer-social-link img { display:block; width:18px; height:18px; flex:none; filter:brightness(0) invert(1); }
+.footer-social-link:hover,.footer-social-link:focus-visible { color:#fff; text-decoration:underline; text-underline-offset:4px; }
