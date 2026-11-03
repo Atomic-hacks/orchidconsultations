@@ -16,6 +16,7 @@ import { useLenis } from "lenis/react";
 import { Navbar } from "./components/Navbar";
 import { PageErrorBoundary } from "./components/PageErrorBoundary";
 import { Footer } from "./components/Footer";
+import { FraudAlert } from "./components/FraudAlert";
 import {
   Preloader,
   SmoothScroll,
@@ -31,6 +32,9 @@ const Team = lazy(() => import("./pages/Team"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Calculator = lazy(() => import("./pages/Calculator"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Whistleblowing = lazy(() => import("./pages/Whistleblowing"));
+const Feedback = lazy(() => import("./pages/Feedback"));
 const EventGallery = lazy(() => import("./pages/EventGallery"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 function Loading() {
@@ -61,6 +65,9 @@ function Layout() {
         "/contact": "Contact",
         "/faq": "FAQ",
         "/privacy": "Privacy Policy",
+        "/terms": "Terms & Conditions",
+        "/whistleblowing": "Whistleblowing Policy",
+        "/feedback": "Feedback & Complaints",
         "/event-gallery": "Event Gallery",
         "/services": "Services",
         "/investment-calculator": "Investment Calculator",
@@ -103,6 +110,9 @@ function Layout() {
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/investment-calculator" element={<Calculator />} />
                   <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/whistleblowing" element={<Whistleblowing />} />
+                  <Route path="/feedback" element={<Feedback />} />
                   <Route path="/event-gallery" element={<EventGallery />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
@@ -123,6 +133,7 @@ function Layout() {
       </main>
       <Footer />
       <Preloader />
+      <FraudAlert />
     </>
   );
 }

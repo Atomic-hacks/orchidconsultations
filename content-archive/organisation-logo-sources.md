@@ -20,3 +20,7 @@ The user supplied a Wakainvest Whistleblowing Policy and explicitly requested ad
 ## Gallery
 
 The user requested stock photography. The Event Gallery reuses existing local stock images with a visible illustrative-photography notice, descriptive captions and no fabricated event dates or participant identities.
+
+## Subsequent legal-page update — 3 November 2026
+
+The user supplied replacement Privacy Policy and Terms and Conditions copy, requested the original Whistleblowing Policy as a separate page, and confirmed that Orchid holds the stated SEC Fund and Portfolio Manager licence. The supplied clauses are retained with the company identity changed to Orchiddigital Consulting Limited / Orchid and the original whistleblowing contact details replaced by Orchid’s published phone, website and email. Regulatory status is user-confirmed; it was not independently verified in this update.

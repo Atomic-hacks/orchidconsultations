@@ -6,7 +6,6 @@ import { useLenis } from "lenis/react";
 import { contact, navigation, socialLinks } from "../data/site";
 import { Button, TextLink } from "./Button";
 import { Heading } from "./Reveal";
-import { services } from "../data/services";
 import { images } from "../data/images";
 export function Footer() {
   const reduced = useReducedMotion();
@@ -64,13 +63,12 @@ export function Footer() {
             ))}
             <TextLink to="/contact">Contact</TextLink>
           </div>
-          <div className="footer-services">
-            <h3>Services</h3>
-            {services.map((s) => (
-              <TextLink key={s.slug} to={`/services/${s.slug}`}>
-                {s.title}
-              </TextLink>
-            ))}
+          <div className="footer-legal">
+            <h3>Legal &amp; Policies</h3>
+            <TextLink to="/privacy">Privacy Policy</TextLink>
+            <TextLink to="/terms">Terms &amp; Conditions</TextLink>
+            <TextLink to="/whistleblowing">Whistleblowing Policy</TextLink>
+            <TextLink to="/feedback">Feedback &amp; Complaints</TextLink>
           </div>
           <div>
             <h3>Contact info</h3>
