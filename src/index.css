@@ -2772,7 +2772,7 @@ p { font-size:clamp(16px,1.15vw,18px); line-height:1.7; }
 
 /* Full-bleed hero: keep the photographic composition within every viewport. */
 .footer-brand { display:block; width:100%; max-width:300px; margin-bottom:24px; }
-.footer-brand img { display:block; width:100%; height:auto; max-height:64px; object-fit:contain; object-position:left center; filter:brightness(0) invert(1); }
+.footer-brand img { display:block; width:100%; height:auto; max-height:64px; object-fit:contain; object-position:left center; }
 .footer-description { max-width:34ch; }
 .footer-grid>div { min-width:0; }
 .footer-contact-link { overflow-wrap:anywhere; }
