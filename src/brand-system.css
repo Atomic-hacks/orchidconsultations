@@ -304,7 +304,7 @@ p { text-wrap:pretty; }
 .footer-identity>p { max-width:58ch; margin:0; color:#d2d8e3; font-size:14px; line-height:1.7; }
 .footer-link-groups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; text-align:center; }
 .footer-link-groups>section { min-width:0; }
-.footer-link-groups h3 { display:flex; align-items:center; justify-content:center; min-height:52px; margin:0; padding:14px 12px; background:#3c4c68; color:#fff; font-size:16px; font-weight:550; letter-spacing:0; }
+.footer-link-groups h3 { display:flex; align-items:center; justify-content:center; min-height:52px; margin:0; padding:14px 12px; background:#1763c7; color:#fff; font-size:16px; font-weight:550; letter-spacing:0; }
 .footer-link-groups nav,.footer-contact-details { display:flex; flex-direction:column; align-items:center; gap:4px; padding:18px 20px; }
 .footer-link-groups nav>a { display:inline-flex; align-items:center; justify-content:center; min-height:36px; max-width:100%; margin:0; color:#d2d8e3; font-size:14px; }
 .footer-link-groups .roll-window,.footer-link-groups .roll-track>span { white-space:normal; height:auto; min-height:1.4em; }
