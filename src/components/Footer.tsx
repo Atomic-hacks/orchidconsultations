@@ -14,6 +14,7 @@ export function Footer() {
     else window.scrollTo({ top: 0, behavior: 'instant' });
   };
   return <footer className="footer footer-simple"><div className="wrap">
+    <div className="footer-main">
     <div className="footer-identity">
       <Link className="wordmark footer-brand" to="/" aria-label="Orchid Consultations home"><BrandLogo /></Link>
       <p>Empowering businesses for global growth through technology, training, and enterprise transformation.</p>
@@ -25,11 +26,13 @@ export function Footer() {
         <a href={`mailto:${contact.email}`}><Mail size={16} aria-hidden="true" /><span>{contact.email}</span></a>
         <a href={`tel:${contact.tel}`}><Phone size={16} aria-hidden="true" /><span>{contact.phone}</span></a>
         <p><MapPin size={16} aria-hidden="true" /><span>{contact.address}</span></p>
-      </div></section>
-    </div>
+      </div>
     <nav className="footer-socials" aria-label="Social media">{socialLinks.map(item => <a key={item.label} href={item.href} className={`footer-social-link social-${item.icon.split('/').pop()?.replace('.svg', '')}`}>
       <span className="footer-social-icon"><span style={{ maskImage: `url(${item.icon})`, WebkitMaskImage: `url(${item.icon})` }} aria-hidden="true" /></span><span>{item.label}</span>
     </a>)}</nav>
+      </section>
+    </div>
+    </div>
     <div className="footer-base">
       <div className="footer-license"><img src="/liscence.jpg" alt="Licensed — Money Lending and SCUML Certified" width="1080" height="1080" loading="lazy" /><span>Money Lending &amp; SCUML</span></div>
       <p>© {new Date().getFullYear()} Orchiddigital Consulting. All rights reserved.</p>
