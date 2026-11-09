@@ -8,9 +8,9 @@ import { Container, SectionHeader } from './SectionLayout';
 import { transition } from '../lib/motion';
 
 const stats: readonly { value: number; suffix: string; label: string; icon: IconName }[] = [
-  { value: 50, suffix: '+', label: 'International markets', icon: 'Globe2' },
+  { value: 200, suffix: '+', label: 'International markets', icon: 'Globe2' },
   { value: 24, suffix: '/7', label: 'Facility monitoring', icon: 'Activity' },
-  { value: 24, suffix: '–48h', label: 'Loan approval window', icon: 'Clock3' },
+  { value: 6, suffix: ' business days', label: 'Loan approval window', icon: 'Clock3' },
   { value: 365, suffix: ' days', label: 'Investment period', icon: 'CalendarClock' },
 ];
 function StatItem({ value, suffix, label, icon }: typeof stats[number]) {

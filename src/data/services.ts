@@ -27,7 +27,7 @@ const serviceCopy = [
     ],
     "benefits": [
       "Grow revenue faster in high-value markets",
-      "Access 50+ international markets easily",
+      "Access 200+ international markets easily",
       "Significantly reduced market entry time",
       "End-to-end regulatory compliance guidance"
     ],
@@ -109,7 +109,7 @@ const serviceCopy = [
       "Minimal documentation required"
     ],
     "benefits": [
-      "Fast approval within 24-48 hours",
+      "Fast approval within 6 business days",
       "Transparent fee structure",
       "6-month flexible repayment",
       "Dedicated loan support team"
