@@ -24,3 +24,19 @@ The user requested stock photography. The Event Gallery reuses existing local st
 ## Subsequent legal-page update — 3 November 2026
 
 The user supplied replacement Privacy Policy and Terms and Conditions copy, requested the original Whistleblowing Policy as a separate page, and confirmed that Orchid holds the stated SEC Fund and Portfolio Manager licence. The supplied clauses are retained with the company identity changed to Orchiddigital Consulting Limited / Orchid and the original whistleblowing contact details replaced by Orchid’s published phone, website and email. Regulatory status is user-confirmed; it was not independently verified in this update.
+
+## User-supplied remaining logos — 9 November 2026
+
+The user directed us to the assets in `/Users/mac/Documents/projects`. These supplied files replace the remaining text-only entries:
+
+| Supplied filename | Local website asset | Entry |
+| --- | --- | --- |
+| IRVIN.logo_.webp | public/images/organisations/irvin.webp | IRVIN |
+| south-south.webp | public/images/organisations/south-south.webp | South South Entrepreneurship Development Centre |
+| pnd.svg | public/images/organisations/pnd.svg | PIND; corrected the former PND label to match the visible logo |
+| wakacredit.webp | public/images/organisations/wakacredit.webp | WakaCredit; corrected the former WakaCare label to match the visible logo |
+| mayak.webp | public/images/organisations/mayak.webp | Mayak Services |
+| livivhun.webp | public/images/organisations/livichun.webp | Livichun |
+| megastar_weblogo.webp | public/images/organisations/megastar.webp | Megastar |
+
+Files were copied without altering their artwork. All existing partner/client entries now have a logo. No new partnership or sponsorship claims were added.
