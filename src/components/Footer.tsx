@@ -27,14 +27,13 @@ export function Footer() {
         <a href={`tel:${contact.tel}`}><Phone size={16} aria-hidden="true" /><span>{contact.phone}</span></a>
         <p><MapPin size={16} aria-hidden="true" /><span>{contact.address}</span></p>
       </div>
-    <nav className="footer-socials" aria-label="Social media">{socialLinks.map(item => <a key={item.label} href={item.href} className={`footer-social-link social-${item.icon.split('/').pop()?.replace('.svg', '')}`}>
-      <span className="footer-social-icon"><span style={{ maskImage: `url(${item.icon})`, WebkitMaskImage: `url(${item.icon})` }} aria-hidden="true" /></span><span>{item.label}</span>
+    <nav className="footer-socials" aria-label="Social media">{socialLinks.map(item => <a key={item.label} href={item.href} aria-label={item.label} title={item.label} className={`footer-social-link social-${item.icon.split('/').pop()?.replace('.svg', '')}`}>
+      <span className="footer-social-icon"><span style={{ maskImage: `url(${item.icon})`, WebkitMaskImage: `url(${item.icon})` }} aria-hidden="true" /></span>
     </a>)}</nav>
       </section>
     </div>
     </div>
     <div className="footer-base">
-      <div className="footer-license"><img src="/liscence.jpg" alt="Licensed — Money Lending and SCUML Certified" width="1080" height="1080" loading="lazy" /><span>Money Lending &amp; SCUML</span></div>
       <p>© {new Date().getFullYear()} Orchiddigital Consulting. All rights reserved.</p>
       <button onClick={top} className="back-top">Back to top <ArrowUp size={16} strokeWidth={1.5} /></button>
     </div>

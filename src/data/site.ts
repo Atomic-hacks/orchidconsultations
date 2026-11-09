@@ -14,9 +14,7 @@ export const contact = {
 export const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/orchiddigitaledc/', icon: '/icons/social/instagram.svg' },
   { label: 'LinkedIn', href: '', icon: '' },
-  { label: 'X (Twitter)', href: 'https://twitter.com/Orchiddigitale1', icon: '/icons/social/x.svg' },
   { label: 'Facebook', href: 'https://web.facebook.com/Orchiddigitaledc-635826767038728', icon: '/icons/social/facebook.svg' },
-  { label: 'YouTube', href: 'https://m.youtube.com/channel/UCs-A6_ceAfUXl7M8OgPw-YQ', icon: '/icons/social/youtube.svg' },
   { label: 'WhatsApp', href: contact.whatsapp, icon: '/icons/social/whatsapp.svg' },
 ].filter(link => link.href);
 export const process = [
