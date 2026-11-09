@@ -15,13 +15,15 @@ export function Footer() {
   };
   return <footer className="footer footer-simple"><div className="wrap">
     <div className="footer-lead">
+      <div className="footer-message">
       <h2>Connecting people. Creating possibilities.</h2>
       <p>Empowering businesses for global growth through technology, training, and enterprise transformation.</p>
-    </div>
-    <div className="footer-main">
+      </div>
     <div className="footer-identity">
       <Link className="wordmark footer-brand" to="/" aria-label="Orchid Consultations home"><BrandLogo /></Link>
     </div>
+    </div>
+    <div className="footer-main">
     <div className="footer-link-groups">
       <section aria-labelledby="footer-company"><h3 id="footer-company">Company</h3><nav aria-label="Company">{navigation.map(item => <TextLink key={item.to} to={item.to}>{item.label}</TextLink>)}<TextLink to="/contact">Contact</TextLink></nav></section>
       <section aria-labelledby="footer-policies"><h3 id="footer-policies">Legal &amp; Policies</h3><nav aria-label="Legal and policies"><TextLink to="/privacy">Privacy Policy</TextLink><TextLink to="/terms">Terms &amp; Conditions</TextLink><TextLink to="/whistleblowing">Whistleblowing Policy</TextLink><TextLink to="/feedback">Feedback &amp; Complaints</TextLink></nav></section>
@@ -35,10 +37,10 @@ export function Footer() {
     </a>)}</nav>
       </section>
     </div>
+    </div>
     <div className="footer-base">
       <p>© {new Date().getFullYear()} Orchiddigital Consulting. All rights reserved.</p>
       <button onClick={top} className="back-top">Back to top <ArrowUp size={16} strokeWidth={1.5} /></button>
-    </div>
     </div>
   </div></footer>;
 }

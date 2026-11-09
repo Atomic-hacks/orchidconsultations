@@ -178,9 +178,8 @@ export default function Home() {
             icon="Mail"
             title="Ready to grow your business?"
             lead="Let Orchiddigital Consulting help you reach your next milestone."
-            dark
             aside={
-              <Button to="/contact" variant="light">
+              <Button to="/contact" variant="dark">
                 Schedule a consultation
               </Button>
             }
