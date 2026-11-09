@@ -306,7 +306,7 @@ p { text-wrap:pretty; }
 .footer-simple .footer-brand .brand-logo img { filter:none; }
 .footer-link-groups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:48px; width:100%; text-align:left; }
 .footer-link-groups>section { min-width:0; }
-.footer-link-groups h3 { display:flex; align-items:center; justify-content:flex-start; min-height:32px; margin:0; padding:0; background:transparent; color:#9dc6e9; font-size:15px; font-weight:550; letter-spacing:0; }
+.footer-link-groups h3 { display:flex; align-items:center; justify-content:flex-start; min-height:32px; margin:0; padding:0; background:transparent; color:#b9d79b; font-size:15px; font-weight:550; letter-spacing:0; }
 .footer-link-groups nav,.footer-contact-details { display:flex; flex-direction:column; align-items:flex-start; gap:2px; padding:8px 0 0; }
 .footer-link-groups nav>a { display:inline-flex; align-items:center; justify-content:flex-start; min-height:30px; max-width:100%; margin:0; color:#d2d8e3; font-size:14px; line-height:1.4; }
 .footer-link-groups .roll-window,.footer-link-groups .roll-track>span { white-space:normal; height:auto; min-height:1.4em; }
