@@ -16,7 +16,8 @@ const stats: readonly { value: number; suffix: string; label: string; icon: Icon
 function StatItem({ value, suffix, label, icon }: typeof stats[number]) {
   const ref = useRef<HTMLDivElement>(null); const inView = useInView(ref, { once: true }); const reduced = useReducedMotion(); const [display, setDisplay] = useState(reduced ? value : 0);
   useEffect(() => { if (!inView || reduced) return; const control = animate(0, value, { ...transition, onUpdate: latest => setDisplay(Math.round(latest)) }); return () => control.stop(); }, [inView, reduced, value]);
-  return <div className="stat-card-v2" ref={ref}><IconBadge icon={icon} dark /><strong>{display}{suffix}</strong><span>{label}</span></div>;
+  const displaySuffix = suffix === ' business days' && display === 1 ? ' business day' : suffix;
+  return <div className="stat-card-v2" ref={ref}><IconBadge icon={icon} dark /><strong>{display}{displaySuffix}</strong><span>{label}</span></div>;
 }
 export function Stats() {
   return <SectionBackground image={images.stats} className="stats-section-v2" overlay={.82}><Container><SectionHeader index="05" label="At a glance" icon="BarChart3" title="Capabilities with clear operating parameters." dark /><div className="stats-grid-v2">{stats.map(stat => <StatItem key={stat.label} {...stat} />)}</div></Container></SectionBackground>;
