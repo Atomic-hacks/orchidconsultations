@@ -50,7 +50,7 @@ export default function About() {
       <Container className="about-trust-grid">
         <div className="about-trust-copy">
           <h2 id="about-trust-title">Licensed. Verified. Accountable.</h2>
-          <p>Orchiddigital operates in full regulatory compliance as a licensed money lending company and SCUML-certified business.</p>
+          <p>Orchiddigital operates in full regulatory compliance as a licensed money lending company and SCUML-certified.</p>
         </div>
         <figure className="about-trust-license">
           <span className="about-license-mark">
