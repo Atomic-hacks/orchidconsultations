@@ -49,12 +49,14 @@ export default function About() {
     <section className="about-trust-v2" aria-labelledby="about-trust-title">
       <Container className="about-trust-grid">
         <div className="about-trust-copy">
-          <h2 id="about-trust-title">Money Lending License &amp; SCUML Certified</h2>
-          <p>Orchiddigital operates under full regulatory compliance.</p>
+          <h2 id="about-trust-title">Licensed. Verified. Accountable.</h2>
+          <p>Orchiddigital operates in full regulatory compliance as a licensed money lending company and SCUML-certified business.</p>
         </div>
         <figure className="about-trust-license">
-          <img src="/liscence.jpg" alt="Money Lending License and SCUML certification" width="1080" height="1080" />
-          <figcaption>Regulatory credentials</figcaption>
+          <span className="about-license-mark">
+            <img src="/liscence.jpg" alt="Money Lending License and SCUML certification" width="1280" height="1280" />
+          </span>
+          <figcaption>Money Lending License &amp; SCUML Certified</figcaption>
         </figure>
         <div className="about-trust-actions" aria-label="Choose how to work with Orchid">
           <Button to="/contact?service=access-to-finance">Discuss funding needs</Button>
