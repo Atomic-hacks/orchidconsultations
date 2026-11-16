@@ -7,9 +7,9 @@ export const navigation = [
 export const contact = {
   whatsapp: 'https://wa.me/message/F4SVLZIKATXML1',
   email: 'info@orchiddigitalconsulting.com', phone: '09077251862', tel: '+2349077251862',
-  address: 'NO 314 Peter Odili Extension by Old Refinery Road Opposite Genesis Fastfood, Port Harcourt, Rivers State.',
+  address: 'No. 314, Old Refinery Road, Opposite Genesis Fast Food, Elelenwo, Port Harcourt, Rivers State.',
   hours: 'Monday - Friday: 08:00 AM – 06:00 PM', weekend: 'Saturday & Sunday: Closed',
-  maps: 'https://maps.google.com/?q=NO+314+Peter+Odili+Extension+by+Old+Refinery+Road+Opposite+Genesis+Fastfood,+Port+Harcourt,+Rivers+State',
+  maps: 'https://maps.google.com/?q=No.+314,+Old+Refinery+Road,+Opposite+Genesis+Fast+Food,+Elelenwo,+Port+Harcourt,+Rivers+State',
 } as const;
 export const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/orchiddigitaledc/', icon: '/icons/social/instagram.svg' },

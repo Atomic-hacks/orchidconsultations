@@ -1,7 +1,6 @@
 import { Button } from '../components/Button';
 import { Media } from '../components/Media';
 import { PageHeader } from '../components/PageHeader';
-import { PartnerMarquee } from '../components/PartnerMarquee';
 import { Container, Section, SectionHeader } from '../components/SectionLayout';
 import { images } from '../data/images';
 
@@ -50,12 +49,12 @@ export default function About() {
     <section className="about-trust-v2" aria-labelledby="about-trust-title">
       <Container className="about-trust-grid">
         <div className="about-trust-copy">
-          <h2 id="about-trust-title">Licensed. Verified. Accountable.</h2>
-          <p>Orchiddigital operates in full regulatory compliance as a licensed money lending company and SCUML-certified business.</p>
+          <h2 id="about-trust-title">Money Lending License &amp; SCUML Certified</h2>
+          <p>Orchiddigital operates under full regulatory compliance.</p>
         </div>
         <figure className="about-trust-license">
-          <img src="/liscence.jpg" alt="Licensed Money Lender and SCUML Certified" width="1080" height="1080" />
-          <figcaption>Money Lending &amp; SCUML</figcaption>
+          <img src="/liscence.jpg" alt="Money Lending License and SCUML certification" width="1080" height="1080" />
+          <figcaption>Regulatory credentials</figcaption>
         </figure>
         <div className="about-trust-actions" aria-label="Choose how to work with Orchid">
           <Button to="/contact?service=access-to-finance">Discuss funding needs</Button>
@@ -119,7 +118,5 @@ export default function About() {
         </div>
       </Container>
     </Section>
-
-    <PartnerMarquee directory />
   </>;
 }

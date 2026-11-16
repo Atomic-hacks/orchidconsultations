@@ -1,22 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { ShieldAlert, X } from 'lucide-react';
 
-const storageKey = 'orchid-fraud-alert-shown-v1';
-
 export function FraudAlert() {
   const dialog = useRef<HTMLDialogElement>(null);
   const title = useRef<HTMLHeadingElement>(null);
-  const [visible, setVisible] = useState(() => {
-    try { return localStorage.getItem(storageKey) !== 'true'; }
-    catch { return true; }
-  });
+  const [visible, setVisible] = useState(true);
   useEffect(() => {
     if (!visible) return;
     const element = dialog.current;
     const timer = window.setTimeout(() => {
       element?.showModal();
       title.current?.focus();
-      try { localStorage.setItem(storageKey, 'true'); } catch { /* Storage may be disabled. */ }
     }, 800);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';

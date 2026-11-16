@@ -5,7 +5,6 @@ import { FeatureCard } from "../components/FeatureCard";
 import { HeroSlideshow } from "../components/HeroSlideshow";
 import { Media } from "../components/Media";
 import { PartnerMarquee } from "../components/PartnerMarquee";
-import { Process } from "../components/Process";
 import { SectionBackground } from "../components/SectionBackground";
 import { Container, Section, SectionHeader } from "../components/SectionLayout";
 import { Stats } from "../components/Stats";
@@ -97,7 +96,7 @@ export default function Home() {
             index="03"
             label="Services"
             icon="Layers3"
-            title="Nine disciplines. One operating partner."
+            title="Seven disciplines. One operating partner."
             lead="Discover how we can help your business thrive with our comprehensive solutions."
             aside={
               <Button to="/services" variant="outline">
@@ -141,7 +140,6 @@ export default function Home() {
           </div>
         </Container>
       </Section>
-      <Process />
       <Stats />
       <Section className="why-section-v2">
         <Container>

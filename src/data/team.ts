@@ -10,19 +10,19 @@ export const team = [
     "linkedin": "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
   },
   {
-    "name": "Promise Obioha",
-    "fullName": "Promise Obioha",
-    "role": "Operations Manager",
-    "image": "/PHOTO-2026-11-16-10-31-48.jpg",
-    "bio": "He coordinates daily operations, project delivery, and team workflows, ensuring client engagements are managed efficiently from planning through completion.",
-    "linkedin": "#"
-  },
-  {
     "name": "Blessing Nwasuruba",
     "fullName": "Mr. Blessing Nwasuruba",
     "role": "Chief Liaison Officer",
     "image": "/PHOTO-2026-11-16-10-32-43.jpg",
     "bio": "He leads stakeholder engagement and institutional relationships, connecting clients and partners with the right people, resources, and opportunities.",
+    "linkedin": "#"
+  },
+  {
+    "name": "Promise Obioha",
+    "fullName": "Promise Obioha",
+    "role": "Operations Manager",
+    "image": "/PHOTO-2026-11-16-10-31-48.jpg",
+    "bio": "He coordinates daily operations, project delivery, and team workflows, ensuring client engagements are managed efficiently from planning through completion.",
     "linkedin": "#"
   },
   {

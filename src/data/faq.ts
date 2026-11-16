@@ -58,7 +58,7 @@ export const faq = [
   },
   {
     "question": "Where are you located?",
-    "answer": "NO 314 Peter Odili Extension by Old Refinery Road Opposite Genesis Fastfood, Port Harcourt, Rivers State.",
+    "answer": "No. 314, Old Refinery Road, Opposite Genesis Fast Food, Elelenwo, Port Harcourt, Rivers State.",
     "category": "contact"
   },
   {

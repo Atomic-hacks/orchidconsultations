@@ -27,7 +27,7 @@ const serviceCopy = [
     ],
     "benefits": [
       "Grow revenue faster in high-value markets",
-      "Access 200+ international markets easily",
+      "Connect with qualified buyers and market opportunities",
       "Significantly reduced market entry time",
       "End-to-end regulatory compliance guidance"
     ],
@@ -80,41 +80,20 @@ const serviceCopy = [
     "title": "Orchiddigital Investment Service",
     "intro": "Grow your savings with attractive interest rates. Lock your savings for 365 days and receive competitive returns on your investment.",
     "capabilities": [
-      "5% monthly ROI for investments below ₦50M",
-      "3.3% monthly ROI for investments ₦50M and above",
+      "3% monthly ROI for investments from ₦5M to ₦50M",
+      "2.5% monthly ROI for investments above ₦50M",
       "Fixed 365-day investment period",
       "Monthly interest payments plus capital return",
       "Secure and transparent investment platform",
       "Instant interest calculation and tracking"
     ],
     "benefits": [
-      "Up to 60% total annual return",
-      "Flexible investment amounts",
+      "Competitive monthly returns",
+      "Minimum investment of ₦5M",
       "Monthly ROI payments",
-      "Guaranteed capital return"
+      "Clear investment tracking"
     ],
     "source": "https://www.orchiddigitalconsulting.com/services/investment"
-  },
-  {
-    "number": "08",
-    "slug": "loan",
-    "title": "Orchiddigital Loan Service",
-    "intro": "Access funds when you need them most with our fast and easy loan service. Get the financial support your business needs to thrive.",
-    "capabilities": [
-      "6-month loan duration",
-      "Quick approval process",
-      "Competitive interest rates",
-      "Flexible repayment terms",
-      "Business-focused loan products",
-      "Minimal documentation required"
-    ],
-    "benefits": [
-      "Fast approval within 6 business days",
-      "Transparent fee structure",
-      "6-month flexible repayment",
-      "Dedicated loan support team"
-    ],
-    "source": "https://www.orchiddigitalconsulting.com/services/loan"
   },
   {
     "number": "09",
@@ -159,27 +138,6 @@ const serviceCopy = [
     "source": "https://www.orchiddigitalconsulting.com/services/support"
   },
   {
-    "number": "11",
-    "slug": "hr-training-and-management",
-    "title": "Human Resource Training and Management",
-    "intro": "We help you build and manage high-performing teams through professional training, recruitment, and structured HR systems.",
-    "capabilities": [
-      "Staff recruitment and talent placement",
-      "Professional skill development training",
-      "HR policy and system development",
-      "Performance management systems",
-      "Team building and culture development",
-      "Employee engagement and retention"
-    ],
-    "benefits": [
-      "Improved team productivity and morale",
-      "Compliance with latest labor regulations",
-      "Lower staff turnover and better hiring",
-      "Structured, professional work environment"
-    ],
-    "source": "https://www.orchiddigitalconsulting.com/services/hr-training-and-management"
-  },
-  {
     "number": "12",
     "slug": "project-management",
     "title": "Project Management",
@@ -215,10 +173,8 @@ const serviceIcons: Record<ServiceSlug, IconName> = {
   'software-development': 'MonitorCog',
   'access-to-finance': 'Landmark',
   investment: 'TrendingUp',
-  loan: 'HandCoins',
   'sourcing-of-goods-and-services': 'PackageSearch',
   support: 'Lightbulb',
-  'hr-training-and-management': 'Users',
   'project-management': 'ListChecks',
 };
 
@@ -231,12 +187,9 @@ export const services: readonly Service[] = serviceCopy.map((service, index) => 
   benefits: service.benefits.map(text => ({ text, icon: 'Check' as const })),
 }));
 
-// Compliance review required: the audited investment ROI figures and “Guaranteed capital return” claim must be approved before publication.
-
 export const serviceGroups = [
   { title: 'Market and Growth', slugs: ['access-to-market', 'support'] },
-  { title: 'Finance', slugs: ['access-to-finance', 'investment', 'loan'] },
+  { title: 'Finance', slugs: ['access-to-finance', 'investment'] },
   { title: 'Operations', slugs: ['sourcing-of-goods-and-services', 'project-management'] },
-  { title: 'People and Training', slugs: ['hr-training-and-management'] },
   { title: 'Technology', slugs: ['software-development'] },
 ] as const;

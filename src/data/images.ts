@@ -33,6 +33,6 @@ export const clientImages = {
 
 const serviceImageOrder = [supplied.meeting, supplied.workshop, supplied.planning, supplied.conference, supplied.advisory, supplied.training] as const;
 export const serviceImages = Object.fromEntries([
-  'access-to-market','entrepreneurship-training','facility-management','insurance-audit-tax','software-development','access-to-finance',
-  'investment','loan','sourcing-of-goods-and-services','support','hr-training-and-management','project-management',
+  'access-to-market','software-development','access-to-finance','investment',
+  'sourcing-of-goods-and-services','support','project-management',
 ].map((slug, index) => [slug, serviceImageOrder[index % serviceImageOrder.length]])) as Record<Service['slug'], ImageAsset>;
