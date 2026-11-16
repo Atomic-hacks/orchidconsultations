@@ -2,10 +2,18 @@ export interface TeamMember { name: string; fullName: string; role: string; full
 
 export const staff = [
   {
+    "name": "Chisom Esther Owuamanam",
+    "fullName": "Chisom Esther Owuamanam",
+    "role": "Admin Officer",
+    "image": "/PHOTO-2026-11-16-10-33-24.jpg",
+    "bio": "She supports day-to-day administration, record keeping, scheduling, and internal coordination to help the office run smoothly.",
+    "linkedin": "#"
+  },
+  {
     "name": "Victoria Ajayi",
     "fullName": "Victoria Ajayi",
     "role": "Social Media Manager",
-    "image": "https://ik.imagekit.io/shiga/orchid/AJAYE8.jpg?updatedAt=1761094336871",
+    "image": "",
     "bio": "She manages our social media presence, creating engaging content and helping the brand connect with people across multiple platforms.",
     "linkedin": "#"
   },
@@ -13,7 +21,7 @@ export const staff = [
     "name": "Martin Nwosu",
     "fullName": "Martin Nwosu",
     "role": "IT Personnel",
-    "image": "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.57.00.jpeg",
+    "image": "",
     "bio": "He keeps our systems running smoothly, providing technical support and ensuring our digital tools work efficiently for the team.",
     "linkedin": "#"
   },
@@ -21,7 +29,7 @@ export const staff = [
     "name": "Confidence Itoro",
     "fullName": "Confidence Itoro",
     "role": "Business Development Officer",
-    "image": "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.57.15.jpeg",
+    "image": "",
     "bio": "She supports business growth by identifying opportunities, engaging clients, and helping convert leads into lasting partnerships.",
     "linkedin": "#"
   },
@@ -29,7 +37,7 @@ export const staff = [
     "name": "Salome Uduak",
     "fullName": "Salome Uduak",
     "role": "Admin Officer",
-    "image": "https://ik.imagekit.io/shiga/orchid/WhatsApp%20Image%202026-02-04%20at%2009.58.26.jpeg",
+    "image": "",
     "bio": "She handles daily administrative tasks, keeps records organised, and supports the team to ensure smooth office operations.",
     "linkedin": "#"
   }
