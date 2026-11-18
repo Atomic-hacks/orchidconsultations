@@ -21,7 +21,7 @@ export const team = [
     "name": "Promise Obioha",
     "fullName": "Promise Obioha",
     "role": "Operations Manager",
-    "image": "",
+    "image": "/PHOTO-2026-11-17-19-09-38 2.jpg",
     "bio": "He coordinates daily operations, project delivery, and team workflows, ensuring client engagements are managed efficiently from planning through completion.",
     "linkedin": "#"
   },
@@ -46,7 +46,7 @@ export const team = [
     "fullName": "Adedeji Adewara",
     "role": "Liaison Officer",
     "hoverRole": "Liaison Officer on Power/Telecommunication",
-    "image": "/PHOTO-2026-11-17-19-09-38 2.jpg",
+    "image": "",
     "bio": "With deep experience in power and telecom, he oversees infrastructure development and project execution, turning complex challenges into practical solutions for clients.",
     "linkedin": "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
   }
