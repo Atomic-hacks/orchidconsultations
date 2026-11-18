@@ -1,46 +1,34 @@
 import { BrandLogo } from './BrandLogo';
-import { ArrowUp, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useReducedMotion } from 'motion/react';
-import { useLenis } from 'lenis/react';
-import { contact, navigation, socialLinks } from '../data/site';
-import { TextLink } from './Button';
+import { contact, socialLinks } from '../data/site';
 
 export function Footer() {
-  const reduced = useReducedMotion();
-  const lenis = useLenis();
-  const top = () => {
-    if (lenis && !reduced) lenis.scrollTo(0);
-    else window.scrollTo({ top: 0, behavior: 'instant' });
-  };
   return <footer className="footer footer-simple"><div className="wrap">
-    <div className="footer-lead">
-      <div className="footer-message">
-      <h2>Connecting people. Creating possibilities.</h2>
-      <p>Empowering businesses for global growth through technology, training, and enterprise transformation.</p>
+    <div className="footer-primary">
+      <section className="footer-profile" aria-label="About Orchiddigital Consulting">
+        <Link className="wordmark footer-brand" to="/" aria-label="Orchiddigital Consulting home"><BrandLogo /></Link>
+        <p>A fast-growing integrated financial and consulting services company delivering practical solutions that help businesses build, grow, and create lasting value.</p>
+        <nav className="footer-socials" aria-label="Social media">{socialLinks.map(item => <a key={item.label} href={item.href} aria-label={item.label} title={item.label} className={`footer-social-link social-${item.icon.split('/').pop()?.replace('.svg', '')}`}>
+          <span className="footer-social-icon"><span style={{ maskImage: `url(${item.icon})`, WebkitMaskImage: `url(${item.icon})` }} aria-hidden="true" /></span>
+        </a>)}</nav>
+      </section>
+      <section aria-labelledby="footer-quick-links"><h2 id="footer-quick-links">Quick Links</h2><nav className="footer-nav-list" aria-label="Quick links">
+        <Link to="/about">About Us</Link><Link to="/services">Our Services</Link><Link to="/investment-calculator">Investment Calculator</Link><Link to="/team">Our Team</Link><Link to="/event-gallery">Event Gallery</Link><Link to="/contact">Contact Us</Link>
+      </nav></section>
+      <section aria-labelledby="footer-policies"><h2 id="footer-policies">Legal &amp; Policies</h2><nav className="footer-nav-list" aria-label="Legal and policies">
+        <Link to="/privacy">Privacy Policy</Link><Link to="/terms">Terms &amp; Conditions</Link><Link to="/whistleblowing">Whistleblowing Policy</Link><Link to="/feedback">Feedback &amp; Complaints</Link>
+      </nav></section>
+      <section className="footer-contact-group" aria-labelledby="footer-contact"><h2 id="footer-contact">Contact Us</h2><div className="footer-contact-details">
+        <a href={contact.maps} target="_blank" rel="noreferrer"><MapPin size={24} aria-hidden="true" /><span>{contact.address}</span></a>
+        <a href={`tel:${contact.tel}`}><Phone size={24} aria-hidden="true" /><span>{contact.phone}</span></a>
+        <a href={`mailto:${contact.email}`}><Mail size={24} aria-hidden="true" /><span>{contact.email}</span></a>
       </div>
-    <div className="footer-identity">
-      <Link className="wordmark footer-brand" to="/" aria-label="Orchid Consultations home"><BrandLogo /></Link>
-    </div>
-    </div>
-    <div className="footer-main">
-    <div className="footer-link-groups">
-      <section aria-labelledby="footer-company"><h3 id="footer-company">Company</h3><nav aria-label="Company">{navigation.map(item => <TextLink key={item.to} to={item.to}>{item.label}</TextLink>)}<TextLink to="/contact">Contact</TextLink></nav></section>
-      <section aria-labelledby="footer-policies"><h3 id="footer-policies">Legal &amp; Policies</h3><nav aria-label="Legal and policies"><TextLink to="/privacy">Privacy Policy</TextLink><TextLink to="/terms">Terms &amp; Conditions</TextLink><TextLink to="/whistleblowing">Whistleblowing Policy</TextLink><TextLink to="/feedback">Feedback &amp; Complaints</TextLink></nav></section>
-      <section className="footer-contact-group" aria-labelledby="footer-contact"><h3 id="footer-contact">Contact info</h3><div className="footer-contact-details">
-        <a href={`mailto:${contact.email}`}><Mail size={16} aria-hidden="true" /><span>{contact.email}</span></a>
-        <a href={`tel:${contact.tel}`}><Phone size={16} aria-hidden="true" /><span>{contact.phone}</span></a>
-        <p><MapPin size={16} aria-hidden="true" /><span>{contact.address}</span></p>
-      </div>
-    <nav className="footer-socials" aria-label="Social media">{socialLinks.map(item => <a key={item.label} href={item.href} aria-label={item.label} title={item.label} className={`footer-social-link social-${item.icon.split('/').pop()?.replace('.svg', '')}`}>
-      <span className="footer-social-icon"><span style={{ maskImage: `url(${item.icon})`, WebkitMaskImage: `url(${item.icon})` }} aria-hidden="true" /></span>
-    </a>)}</nav>
       </section>
     </div>
+    <div className="footer-regulatory">
+      <p>Orchiddigital Consulting Limited is licensed by the Securities and Exchange Commission (SEC), Nigeria, as a Fund and Portfolio Manager. It also operates as a licensed money lending company and is SCUML-certified.</p>
     </div>
-    <div className="footer-base">
-      <p>© {new Date().getFullYear()} Orchiddigital Consulting. All rights reserved.</p>
-      <button onClick={top} className="back-top">Back to top <ArrowUp size={16} strokeWidth={1.5} /></button>
-    </div>
+    <p className="footer-copyright">© {new Date().getFullYear()} Orchiddigital Consulting Limited. All rights reserved.</p>
   </div></footer>;
 }

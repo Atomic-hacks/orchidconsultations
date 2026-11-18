@@ -1,25 +1,26 @@
-import { ArrowUpRight } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Film } from 'lucide-react';
 import { Container, Section } from '../components/SectionLayout';
-import { images } from '../data/images';
-
-const gallery = [
-  { image: images.about[4], title: 'Learning together', caption: 'Training and skills development' },
-  { image: images.about[1], title: 'Ideas in conversation', caption: 'Team collaboration' },
-  { image: images.about[2], title: 'Planning the next step', caption: 'Strategy workshops' },
-  { image: images.about[3], title: 'A shared perspective', caption: 'Business advisory' },
-  { image: images.about[0], title: 'Connecting with people', caption: 'Professional gatherings' },
-  { image: images.testimonials, title: 'From insight to action', caption: 'Financial planning' },
-];
+import { galleryCategories, galleryItems, type GalleryCategory } from '../data/gallery';
 
 export default function EventGallery() {
+  const [activeCategory, setActiveCategory] = useState<'All' | GalleryCategory>('All');
+  const visibleItems = useMemo(() => activeCategory === 'All' ? galleryItems : galleryItems.filter(item => item.category === activeCategory), [activeCategory]);
+
   return <Section className="event-gallery-page"><Container>
-    <header className="gallery-heading"><h1>Event Gallery</h1><p>Learning, collaboration and new possibilities.</p></header>
-    <p className="gallery-notice">A visual introduction to our work. These stock photographs are illustrative and do not depict Orchid events or clients.</p>
-    <div className="event-gallery-grid">{gallery.map(({ image, title, caption }) => <figure key={title}>
-      <a href={image.src} target="_blank" rel="noreferrer" aria-label={`View ${title.toLowerCase()} image (opens in a new tab)`}>
-        <img src={image.src} alt={`${image.alt} — illustrative stock photograph`} loading="lazy" width="1200" height="900" style={{ objectPosition: 'position' in image ? image.position : 'center' }} />
-        <figcaption><div><h2>{title}</h2><p>{caption}</p></div><ArrowUpRight size={20} aria-hidden="true" /></figcaption>
-      </a>
+    <header className="gallery-heading"><h1>Event Gallery</h1><p>Conversations, collaborations and milestones from our work.</p></header>
+    <div className="gallery-toolbar">
+      <div className="gallery-filters" role="group" aria-label="Filter gallery by category">
+        {galleryCategories.map(category => <button key={category} type="button" className={activeCategory === category ? 'is-active' : ''} aria-pressed={activeCategory === category} onClick={() => setActiveCategory(category)}>{category}</button>)}
+      </div>
+      <p aria-live="polite">{visibleItems.length} {visibleItems.length === 1 ? 'item' : 'items'}</p>
+    </div>
+    <div className="event-gallery-grid">{visibleItems.map((item, index) => <figure key={item.src}>
+      <div className="gallery-media">
+        {item.type === 'video' ? <video controls preload="metadata" poster={item.poster} aria-label={item.alt}><source src={item.src} type="video/mp4" />Your browser does not support embedded video.</video> : <a href={item.src} target="_blank" rel="noreferrer" aria-label={`Open ${item.title.toLowerCase()} image in a new tab`}><img src={item.src} alt={item.alt} loading={index < 6 ? 'eager' : 'lazy'} decoding="async" /></a>}
+        {item.type === 'video' && <span className="gallery-video-label"><Film size={15} aria-hidden="true" /> Video</span>}
+      </div>
+      <figcaption><h2>{item.title}</h2><p>{item.category}</p></figcaption>
     </figure>)}</div>
   </Container></Section>;
 }

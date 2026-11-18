@@ -5,7 +5,7 @@ export const staff = [
     "name": "Chisom Esther Owuamanam",
     "fullName": "Chisom Esther Owuamanam",
     "role": "Admin Officer",
-    "image": "/PHOTO-2026-11-16-10-33-24.jpg",
+    "image": "/PHOTO-2026-11-17-19-09-38 4.jpg",
     "bio": "She supports day-to-day administration, record keeping, scheduling, and internal coordination to help the office run smoothly.",
     "linkedin": "#"
   },

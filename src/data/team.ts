@@ -5,7 +5,7 @@ export const team = [
     "name": "Chiadikaobi David O.",
     "fullName": "Mr. Chiadikaobi David Okoh",
     "role": "Managing Director",
-    "image": "/PHOTO-2026-11-16-10-31-13.jpg",
+    "image": "/PHOTO-2026-11-17-19-09-38.jpg",
     "bio": "Our Managing Director has broad experience across finance, business development, and professional services. With hands-on involvement in access to finance, loans, market access, enterprise training, and advisory services, he leads the team with a practical understanding of what businesses need to grow and succeed.",
     "linkedin": "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
   },
@@ -13,7 +13,7 @@ export const team = [
     "name": "Blessing Nwasuruba",
     "fullName": "Mr. Blessing Nwasuruba",
     "role": "Chief Liaison Officer",
-    "image": "/PHOTO-2026-11-16-10-32-43.jpg",
+    "image": "/PHOTO-2026-11-17-19-09-38 3.jpg",
     "bio": "He leads stakeholder engagement and institutional relationships, connecting clients and partners with the right people, resources, and opportunities.",
     "linkedin": "#"
   },
@@ -21,7 +21,7 @@ export const team = [
     "name": "Promise Obioha",
     "fullName": "Promise Obioha",
     "role": "Operations Manager",
-    "image": "/PHOTO-2026-11-16-10-31-48.jpg",
+    "image": "",
     "bio": "He coordinates daily operations, project delivery, and team workflows, ensuring client engagements are managed efficiently from planning through completion.",
     "linkedin": "#"
   },
@@ -44,9 +44,9 @@ export const team = [
   {
     "name": "Adedeji Adewara",
     "fullName": "Adedeji Adewara",
-    "role": "Laison Officer",
-    "hoverRole": "Laison Officer on Power/Telecommunication",
-    "image": "",
+    "role": "Liaison Officer",
+    "hoverRole": "Liaison Officer on Power/Telecommunication",
+    "image": "/PHOTO-2026-11-17-19-09-38 2.jpg",
     "bio": "With deep experience in power and telecom, he oversees infrastructure development and project execution, turning complex challenges into practical solutions for clients.",
     "linkedin": "https://www.linkedin.com/in/adedeji-adewara-mnse-mnieee-nebosh-igc-593687a8"
   }
