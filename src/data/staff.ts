@@ -4,41 +4,9 @@ export const staff = [
   {
     "name": "Chisom Esther Owuamanam",
     "fullName": "Chisom Esther Owuamanam",
-    "role": "Admin Officer",
+    "role": "Administrative Officer",
     "image": "/PHOTO-2026-11-17-19-09-38 4.jpg",
-    "bio": "She supports day-to-day administration, record keeping, scheduling, and internal coordination to help the office run smoothly.",
-    "linkedin": "#"
-  },
-  {
-    "name": "Victoria Ajayi",
-    "fullName": "Victoria Ajayi",
-    "role": "Social Media Manager",
-    "image": "",
-    "bio": "She manages our social media presence, creating engaging content and helping the brand connect with people across multiple platforms.",
-    "linkedin": "#"
-  },
-  {
-    "name": "Martin Nwosu",
-    "fullName": "Martin Nwosu",
-    "role": "IT Personnel",
-    "image": "",
-    "bio": "He keeps our systems running smoothly, providing technical support and ensuring our digital tools work efficiently for the team.",
-    "linkedin": "#"
-  },
-  {
-    "name": "Confidence Itoro",
-    "fullName": "Confidence Itoro",
-    "role": "Business Development Officer",
-    "image": "",
-    "bio": "She supports business growth by identifying opportunities, engaging clients, and helping convert leads into lasting partnerships.",
-    "linkedin": "#"
-  },
-  {
-    "name": "Salome Uduak",
-    "fullName": "Salome Uduak",
-    "role": "Admin Officer",
-    "image": "",
-    "bio": "She handles daily administrative tasks, keeps records organised, and supports the team to ensure smooth office operations.",
+    "bio": "Chisom Owuamanam is an Administrative Officer at Orchiddigital, where she plays an integral role in supporting the company's administrative operations, organisational efficiency, and business processes. With an academic background in Sociology, alongside professional certification in Customer Relationship Management (CRM) and Human Resource Management (HRM), and a keen interest in organisational management, business administration, and the financial services sector, she brings a structured, detail-oriented, and results-driven approach to her responsibilities. Her role encompasses administrative coordination, documentation and records management, internal communication, operational support, and facilitating effective workflow across departments. She is committed to maintaining high professional standards, promoting operational efficiency, and ensuring that organisational processes align with the company's objectives. Chisom is passionate about professional development, effective organisational management, and contributing to sustainable business growth through diligence, accountability, and excellence in service delivery.",
     "linkedin": "#"
   }
 ] satisfies readonly TeamMember[];
