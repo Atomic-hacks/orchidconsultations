@@ -17,12 +17,6 @@ export const socialLinks = [
   { label: 'Facebook', href: 'https://web.facebook.com/Orchiddigitaledc-635826767038728', icon: '/icons/social/facebook.svg' },
   { label: 'WhatsApp', href: contact.whatsapp, icon: '/icons/social/whatsapp.svg' },
 ].filter(link => link.href);
-export const process = [
-  { title: 'Discovery & Assessment', text: 'We conduct a comprehensive analysis of your business needs, challenges, and growth opportunities.', icon: 'SearchCheck' },
-  { title: 'Strategy Development', text: 'Our experts create a tailored strategy and roadmap designed specifically for your objectives.', icon: 'Route' },
-  { title: 'Implementation', text: 'We execute the solution with precision, providing ongoing support throughout the process.', icon: 'ListChecks' },
-  { title: 'Optimization', text: 'Continuous monitoring, refinement, and optimization to ensure sustained success and growth.', icon: 'RefreshCw' },
-] as const;
 export const strengths = [
   { title: 'Expert Team', text: 'Our experienced professionals bring deep industry knowledge and proven expertise to every project.', icon: 'Users' },
   { title: 'Proven Results', text: 'We deliver measurable outcomes that drive business growth and operational efficiency.', icon: 'BadgeCheck' },

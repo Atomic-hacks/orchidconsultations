@@ -138,6 +138,3 @@ export const galleryItems: readonly GalleryItem[] = [
 ];
 
 export const galleryCategories = ['All', 'Industry Events', 'Workshops & Capacity Building', 'Stakeholder & Project Engagements', 'Media & Milestones'] as const;
-
-// Exact binary duplicate of PHOTO-2026-11-17-19-15-21.jpg, retained in the source inventory but omitted from display.
-export const duplicateGalleryAssets = ['/images/gallery/PHOTO-2026-11-17-19-15-36 3.jpg'] as const;

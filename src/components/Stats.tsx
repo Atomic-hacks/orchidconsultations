@@ -20,5 +20,5 @@ function StatItem({ value, suffix, label, icon }: typeof stats[number]) {
   return <div className="stat-card-v2" ref={ref}><IconBadge icon={icon} dark /><strong>{display}{displaySuffix}</strong><span>{label}</span></div>;
 }
 export function Stats() {
-  return <SectionBackground image={images.stats} className="stats-section-v2" overlay={.82}><Container><SectionHeader index="05" label="At a glance" icon="BarChart3" title="Capabilities with clear operating parameters." dark /><div className="stats-grid-v2">{stats.map(stat => <StatItem key={stat.label} {...stat} />)}</div></Container></SectionBackground>;
+  return <SectionBackground image={images.stats} className="stats-section-v2" overlay={.82}><Container><SectionHeader title="Capabilities with clear operating parameters." dark /><div className="stats-grid-v2">{stats.map(stat => <StatItem key={stat.label} {...stat} />)}</div></Container></SectionBackground>;
 }

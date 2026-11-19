@@ -1,20 +1,13 @@
-export interface Client { readonly name: string; readonly image?: string; readonly imageAlt?: string; readonly imageTone?: 'dark'; readonly imageScale?: number; readonly kind: 'organisation' | 'person'; readonly quote: string }
+export interface Client { readonly name: string; readonly image?: string; readonly imageAlt?: string; readonly imageTone?: 'dark'; readonly imageScale?: number; readonly kind: 'organisation' | 'person' }
 
 export const clients: readonly Client[] = [
-  // TODO: replace with real client quote.
-  { name: 'Mayak Services', image: '/images/organisations/mayak.webp', imageAlt: 'Mayak Services Limited logo', kind: 'organisation', quote: 'Professional support from the first conversation through delivery.' },
-  // TODO: replace with real client quote.
-  { name: 'Bokolo Group', image: '/images/organisations/bokolo.png', imageAlt: 'Bokolo HSIC Group logo', kind: 'organisation', quote: 'A clear, practical approach to our business requirements.' },
-  // TODO: replace with real client quote.
-  { name: 'Zaffiro Energy', image: clientImages.zaffiroEnergy.src, imageAlt: clientImages.zaffiroEnergy.alt, imageTone: 'dark', imageScale: 2.4, kind: 'organisation', quote: 'Responsive guidance and a well-managed consulting process.' },
-  // TODO: replace with real client quote.
-  { name: 'Everyday Supermarket', image: clientImages.everydaySupermarket.src, imageAlt: clientImages.everydaySupermarket.alt, kind: 'organisation', quote: 'A dependable team with a practical understanding of business operations.' },
-  // TODO: replace with real client quote.
-  { name: 'Livichun', image: '/images/organisations/livichun.webp', imageAlt: 'Livichun Supermarket logo', kind: 'organisation', quote: 'Thoughtful advice, communicated clearly and delivered professionally.' },
-  // TODO: replace with real client quote.
-  { name: 'Megastar', image: '/images/organisations/megastar.webp', imageAlt: 'Megastar logo', kind: 'organisation', quote: 'Structured support that helped our team move forward with confidence.' },
-  // TODO: replace with real client quote. TODO: replace supplied company logo with an approved portrait of Ifeoma Chukwuka.
-  { name: 'Ifeoma Chukwuka', image: clientImages.ifeomaChukwuka.src, imageAlt: clientImages.ifeomaChukwuka.alt, kind: 'person', quote: 'An attentive consulting partner throughout the engagement.' },
+  { name: 'Mayak Services', image: '/images/organisations/mayak.webp', imageAlt: 'Mayak Services Limited logo', kind: 'organisation' },
+  { name: 'Bokolo Group', image: '/images/organisations/bokolo.png', imageAlt: 'Bokolo HSIC Group logo', kind: 'organisation' },
+  { name: 'Zaffiro Energy', image: clientImages.zaffiroEnergy.src, imageAlt: clientImages.zaffiroEnergy.alt, imageTone: 'dark', imageScale: 2.4, kind: 'organisation' },
+  { name: 'Everyday Supermarket', image: clientImages.everydaySupermarket.src, imageAlt: clientImages.everydaySupermarket.alt, kind: 'organisation' },
+  { name: 'Livichun', image: '/images/organisations/livichun.webp', imageAlt: 'Livichun Supermarket logo', kind: 'organisation' },
+  { name: 'Megastar', image: '/images/organisations/megastar.webp', imageAlt: 'Megastar logo', kind: 'organisation' },
+  { name: 'Ifeoma Chukwuka', image: clientImages.ifeomaChukwuka.src, imageAlt: clientImages.ifeomaChukwuka.alt, kind: 'person' },
 ];
 import { clientImages } from './images';
 

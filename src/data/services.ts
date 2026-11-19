@@ -150,7 +150,6 @@ const serviceCopy = [
       "Resource allocation and coordination",
       "Progress tracking and quality assurance"
     ],
-    // TODO: Audited source supplied no "Why choose" list for Project Management.
     "benefits": [],
     "source": "https://www.orchiddigitalconsulting.com/services/project-management"
   }

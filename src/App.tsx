@@ -73,7 +73,7 @@ function Layout() {
         "/investment-calculator": "Investment Calculator",
       }[location.pathname] ??
       "Page not found";
-    document.title = `${title} | Orchid Consultations`;
+    document.title = `${title} | Orchiddigital Consulting`;
     if (!location.hash) {
       lenis?.scrollTo(0, { immediate: true });
       window.scrollTo({ top: 0, behavior: "instant" });

@@ -21,7 +21,6 @@ export const images = {
   stats: supplied.meeting,
   testimonials: supplied.planning,
   about: [supplied.conference, supplied.meeting, supplied.workshop, supplied.advisory, supplied.training],
-  process: [supplied.workshop, supplied.planning, supplied.advisory, supplied.training],
   pageHeaders: { services: supplied.meeting, about: supplied.conference, team: supplied.advisory, contact: supplied.planning, faq: supplied.training, calculator: supplied.workshop, privacy: supplied.conference },
 } as const;
 

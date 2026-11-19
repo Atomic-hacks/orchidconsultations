@@ -8,7 +8,6 @@ import { PartnerMarquee } from "../components/PartnerMarquee";
 import { SectionBackground } from "../components/SectionBackground";
 import { Container, Section, SectionHeader } from "../components/SectionLayout";
 import { Stats } from "../components/Stats";
-import { Testimonials } from "../components/Testimonials";
 import { contact, strengths } from "../data/site";
 import { images } from "../data/images";
 import { services, serviceGroups } from "../data/services";
@@ -68,9 +67,6 @@ export default function Home() {
           </div>
           <div className="intro-copy-v2">
             <SectionHeader
-              index="02"
-              label="Orchid Consultations"
-              icon="BriefcaseBusiness"
               title="Practical business support, built around the work."
               lead="Our goal is to equip founders with practical methodologies and strategies that help them scale sustainably."
             />
@@ -93,9 +89,6 @@ export default function Home() {
       <Section id="services" className="services-home-v2">
         <Container>
           <SectionHeader
-            index="03"
-            label="Services"
-            icon="Layers3"
             title="Seven disciplines. One operating partner."
             lead="Discover how we can help your business thrive with our comprehensive solutions."
             aside={
@@ -144,9 +137,6 @@ export default function Home() {
       <Section className="why-section-v2">
         <Container>
           <SectionHeader
-            index="06"
-            label="Why Orchid"
-            icon="BadgeCheck"
             title="Expertise made useful."
             lead="Comprehensive expertise and proven methodologies that set us apart in the consulting industry."
           />
@@ -162,7 +152,6 @@ export default function Home() {
           </div>
         </Container>
       </Section>
-      <Testimonials />
       <PartnerMarquee directory />
       <SectionBackground
         image={images.cta}
@@ -171,9 +160,6 @@ export default function Home() {
       >
         <Container>
           <SectionHeader
-            index="08"
-            label="Start a conversation"
-            icon="Mail"
             title="Ready to grow your business?"
             lead="Let Orchiddigital Consulting help you reach your next milestone."
             aside={

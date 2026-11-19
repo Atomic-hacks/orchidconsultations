@@ -1,6 +1,5 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { Heading, Reveal } from './Reveal';
-import type { IconName } from '../data/icons';
 
 export function Container({ className = '', ...props }: ComponentPropsWithoutRef<'div'>) {
   return <div className={`site-container ${className}`} {...props} />;
@@ -11,7 +10,7 @@ export function Section({ className = '', tight = false, children, ...props }: C
 }
 
 export function SectionHeader({ title, lead, dark = false, aside }: {
-  index: string; label: string; icon: IconName; title: string; lead?: string; dark?: boolean; aside?: ReactNode;
+  title: string; lead?: string; dark?: boolean; aside?: ReactNode;
 }) {
   return <div className={`section-header${dark ? ' section-header-dark' : ''}`}>
     <div className="section-header-copy"><Heading>{title}</Heading>{lead && <Reveal className="section-lead" delay={0.12}><p>{lead}</p></Reveal>}</div>

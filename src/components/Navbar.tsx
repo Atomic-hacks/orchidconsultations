@@ -41,7 +41,7 @@ function MobileMenu({ close }: { close: () => void }) {
       aria-label="Navigation"
     >
       <div className="menu-top">
-        <Link className="wordmark" to="/" onClick={close} aria-label="Orchid Consultations home">
+        <Link className="wordmark" to="/" onClick={close} aria-label="Orchiddigital Consulting home">
           <BrandLogo />
         </Link>
         <button onClick={close} aria-label="Close menu" className="icon-button">
@@ -97,7 +97,7 @@ export function Navbar() {
           <Link
             className="wordmark"
             to="/"
-            aria-label="Orchid Consultations home"
+            aria-label="Orchiddigital Consulting home"
           >
             <BrandLogo />
           </Link>

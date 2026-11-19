@@ -54,7 +54,7 @@ export default function About() {
         </div>
         <figure className="about-trust-license">
           <span className="about-license-mark">
-            <img src="/liscence.jpg" alt="Money Lending License and SCUML certification" width="1280" height="1280" />
+            <img src="/license.jpg" alt="Money Lending License and SCUML certification" width="1280" height="1280" />
           </span>
           <figcaption>Money Lending License &amp; SCUML Certified</figcaption>
         </figure>
@@ -68,7 +68,7 @@ export default function About() {
     <Section className="about-story-v2">
       <Container className="about-story-grid">
         <div>
-          <SectionHeader index="02" label="Who we are" icon="BriefcaseBusiness" title="Built to connect capital, businesses and opportunity." />
+          <SectionHeader title="Built to connect capital, businesses and opportunity." />
           <div className="about-story-copy">
             <p>Orchiddigital Consulting Limited provides financial, wealth management and consulting solutions to a diverse clientele, including corporate organisations, government institutions, financial institutions, affluent individuals, high-net-worth clients and institutional investors.</p>
             <p>As a growing participant in Nigeria's financial and consulting industry, we are strategically positioned to create sustainable value by combining practical expertise with the proven market experience, reputation and networks of our partners in Nigeria and around the world.</p>
@@ -84,7 +84,7 @@ export default function About() {
 
     <Section className="about-direction-v2">
       <Container>
-        <SectionHeader index="03" label="Mission &amp; vision" icon="Target" title="A clear purpose. A long-term view." lead="Our direction is grounded in responsible access to finance, practical business support and enduring client relationships." />
+        <SectionHeader title="A clear purpose. A long-term view." lead="Our direction is grounded in responsible access to finance, practical business support and enduring client relationships." />
         <div className="about-direction-grid">
           <article>
             <span>Mission</span>
@@ -102,7 +102,7 @@ export default function About() {
 
     <Section className="about-strategic-v2">
       <Container>
-        <SectionHeader index="04" label="How we work" icon="Compass" title="We are S.T.R.A.T.E.G.I.C." lead="Nine commitments, organised into three practical phases, guide how we create long-term value." dark />
+        <SectionHeader title="We are S.T.R.A.T.E.G.I.C." lead="Nine commitments, organised into three practical phases, guide how we create long-term value." dark />
         <div className="strategic-phases">
           {strategicPhases.map((phase) => <article key={phase.title} className="strategic-phase">
             <div className="strategic-phase-heading">

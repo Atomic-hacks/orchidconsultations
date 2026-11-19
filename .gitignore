@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local agent/editor state (never portable between contributors)
+.codex/
+.cursor/
+.impeccable/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

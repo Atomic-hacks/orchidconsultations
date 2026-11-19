@@ -10,7 +10,6 @@ const software = services.find(service => service.slug === 'software-development
 
 const slides = [
   {
-    eyebrow: 'Business & digital consulting',
     title: 'Your partner in business growth and financial success.',
     text: 'We provide financial solutions and business consulting services that help individuals, employees, and businesses access funding, investments, and strategic support for growth.',
     image: images.hero,
@@ -18,7 +17,6 @@ const slides = [
     secondary: { label: 'Explore our services', to: '/services' },
   },
   {
-    eyebrow: finance.title,
     title: finance.title,
     text: finance.intro,
     image: serviceImages[finance.slug],
@@ -26,7 +24,6 @@ const slides = [
     secondary: { label: 'Explore this service', to: `/services/${finance.slug}` },
   },
   {
-    eyebrow: 'Technology',
     title: software.title,
     text: software.intro,
     image: serviceImages[software.slug],
