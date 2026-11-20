@@ -339,7 +339,7 @@ p { text-wrap:pretty; }
 .footer-contact-details>a { display:grid; grid-template-columns:28px minmax(0,1fr); align-items:start; gap:14px; width:100%; margin:0; padding:3px 0; color:#f5f7fa; font-size:16px; line-height:1.6; }
 .footer-contact-details svg { flex:none; margin-top:2px; color:#b9d79b; stroke-width:1.8; }
 .footer-contact-details span { min-width:0; overflow-wrap:anywhere; }
-.footer-simple .footer-socials { display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:flex-start; gap:10px; margin:24px 0 0; padding:0; }
+.footer-simple .footer-socials { display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:center; gap:10px; margin:24px 0 0; padding:0; }
 .footer-simple .footer-socials>.footer-social-link { justify-content:center; width:44px; height:44px; flex:none; min-height:44px; }
 .footer-social-icon { display:grid; place-items:center; width:44px; height:44px; flex:none; border-radius:50%; color:var(--social-ink); background:var(--social-background); }
 .footer-social-icon>span { display:block; width:20px; height:20px; background:currentColor; mask-repeat:no-repeat; mask-position:center; mask-size:contain; -webkit-mask-repeat:no-repeat; -webkit-mask-position:center; -webkit-mask-size:contain; }
