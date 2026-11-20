@@ -648,3 +648,40 @@ p { text-wrap:pretty; }
     gap: 28px;
   }
 }
+
+.team-grid > .team-person {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.team-person .team-portrait {
+  border-radius: 8px;
+}
+
+.team-person .accordion {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.team-person .accordion h3 button {
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.team-person .accordion h3 button > span:last-child {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--brand-blue);
+  border-radius: 50%;
+  color: var(--brand-blue);
+  background: var(--surface);
+}
