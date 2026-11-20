@@ -1,7 +1,7 @@
 /** Display the supplied stacked logo, excluding its transparent canvas margins. */
-export function BrandLogo() {
+export function BrandLogo({ className = "" }: { className?: string }) {
   return (
-    <span className="brand-logo">
+    <span className={`brand-logo ${className}`}>
       <img
         src="/logo-nobg.png"
         alt="Orchiddigital Consulting — Limitless possibilities"

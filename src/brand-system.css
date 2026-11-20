@@ -431,3 +431,220 @@ p { text-wrap:pretty; }
  .strategic-phase h4 { font-size:15px; }
  .strategic-phase li p { font-size:12px; }
 }
+
+/* =========================================
+   FOOTER MAIN LAYOUT
+========================================= */
+
+.footer.footer-simple {
+  width: 100%;
+}
+
+.footer.footer-simple .footer-primary {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1.1fr 1.15fr;
+  gap: 55px;
+  align-items: start;
+  padding: 55px 0 45px;
+}
+
+/* =========================================
+   COMPANY PROFILE
+========================================= */
+
+.footer-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.footer-profile p {
+  max-width: 310px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.footer-primary section h2 {
+  margin: 0 0 18px;
+  line-height: 1.3;
+}
+
+/* =========================================
+   QUICK LINKS & POLICIES
+========================================= */
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-nav-list a {
+  text-decoration: none;
+  line-height: 1.45;
+  transition: opacity 0.25s ease;
+}
+
+.footer-nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.footer-contact-group {
+  min-width: 0;
+}
+
+.footer-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact-details a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+  line-height: 1.5;
+  min-width: 0;
+}
+
+.footer-contact-details a svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-details a span {
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   REGULATORY INFORMATION
+========================================= */
+
+.footer-regulatory {
+  padding: 22px 0;
+}
+
+.footer-regulatory p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-copyright {
+  margin: 0;
+  padding: 18px 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1024px) {
+  .footer.footer-simple .footer-primary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    padding: 45px 0 35px;
+  }
+
+  .footer-profile p {
+    max-width: 350px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+  .footer.footer-simple .footer-primary {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 0 30px;
+  }
+
+  .footer-profile {
+    gap: 16px;
+  }
+
+  .footer-profile p {
+    max-width: 100%;
+  }
+
+  .footer-primary section h2 {
+    margin-bottom: 14px;
+  }
+
+  .footer-nav-list {
+    gap: 12px;
+  }
+
+  .footer-contact-details {
+    gap: 16px;
+  }
+
+  .footer-contact-details a {
+    gap: 12px;
+  }
+
+  .footer-socials {
+    margin-top: 20px;
+  }
+
+  .footer-regulatory {
+    padding: 20px 0;
+  }
+
+  .footer-copyright {
+    padding: 16px 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+  .footer.footer-simple .footer-primary {
+    gap: 28px;
+  }
+}
