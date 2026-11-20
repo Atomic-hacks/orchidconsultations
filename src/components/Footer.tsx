@@ -46,7 +46,7 @@ export function Footer() {
               aria-label="Quick links"
             >
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/about"
               >
                 About Us
@@ -58,25 +58,25 @@ export function Footer() {
                 Our Services
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/investment-calculator"
               >
                 Investment Calculator
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/team"
               >
                 Our Team
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[13px] !leading-1 no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/event-gallery"
               >
                 Event Gallery
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[13px] !leading-1 no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/contact"
               >
                 Contact Us
@@ -189,7 +189,7 @@ export function Footer() {
               href={item.href}
               aria-label={item.label}
               title={item.label}
-              className={`footer-social-link !m-0 inline-flex items-center justify-center social-${item.icon
+              className={`footer-social-link m-0 gap-4 inline-flex items-center justify-center social-${item.icon
                 .split("/")
                 .pop()
                 ?.replace(".svg", "")}`}
@@ -215,7 +215,7 @@ export function Footer() {
         </nav>
 
         {/* Copyright */}
-        <p className="footer-copyright !m-0 !border-t !border-solid !border-white/16 !px-0 !py-1.5 text-center text-[11px] !leading-[1.2] text-[#bfc7d4] max-[640px]:text-left">
+        <p className="footer-copyright mt-1 !border-t !border-solid !border-white/16 !px-0 !py-1.5 text-center text-[11px] !leading-[1.2] text-[#bfc7d4] max-[640px]:text-left">
           © {new Date().getFullYear()} Orchiddigital Consulting Limited. All
           rights reserved.
         </p>
