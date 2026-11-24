@@ -22,7 +22,7 @@ export function Footer() {
               <BrandLogo className="!w-[120px]" />
             </Link>
 
-            <p className="!m-0 max-w-[290px] lg:pr-6 text-[11px] !leading-[1.1] text-[#d2d8e3] max-[1024px]:max-w-[350px] max-[600px]:max-w-full">
+            <p className="!m-0 max-w-[310px] lg:pr-8 text-[12px] !leading-[1.2] text-[#d2d8e3] max-[1024px]:max-w-[350px] max-[600px]:max-w-full">
               A fast-growing integrated financial and consulting services
               company delivering practical solutions that help businesses build,
               grow, and create lasting value.
