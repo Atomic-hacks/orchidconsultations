@@ -17,10 +17,7 @@ import { Navbar } from "./components/Navbar";
 import { PageErrorBoundary } from "./components/PageErrorBoundary";
 import { Footer } from "./components/Footer";
 import { FraudAlert } from "./components/FraudAlert";
-import {
-  Preloader,
-  SmoothScroll,
-} from "./components/Experience";
+import { Preloader, SmoothScroll } from "./components/Experience";
 import { curtain, transition } from "./lib/motion";
 import { services } from "./data/services";
 const Home = lazy(() => import("./pages/Home"));
@@ -108,7 +105,10 @@ function Layout() {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/team" element={<Team />} />
                   <Route path="/faq" element={<FAQ />} />
-                  <Route path="/investment-calculator" element={<Calculator />} />
+                  <Route
+                    path="/investment-calculator"
+                    element={<Calculator />}
+                  />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/whistleblowing" element={<Whistleblowing />} />
