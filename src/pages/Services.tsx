@@ -52,7 +52,6 @@ export default function Services() {
               <section className="catalog-group-v2" key={group.title}>
                 <SectionHeader title={group.title} />
                 <div className="service-media-list">
-                  <h1>victor johnson</h1>
                   {items.map((service, itemIndex) => {
                     const media = serviceMedia[service.slug];
                     return (
