@@ -5,10 +5,10 @@ import { contact, socialLinks } from "../data/site";
 
 export function Footer() {
   return (
-    <footer className="footer pt-4 footer-simple w-full !bg-[var(--ink)] text-[#f5f7fa]">
+    <footer className="footer pt-2 footer-simple w-full !bg-[var(--ink)] text-[#f5f7fa]">
       <div className="wrap px-6">
         {/* Main Footer */}
-        <div className="footer-primary !grid grid-cols-4 items-start !gap-x-4 !gap-y-3 py-4 !pb-4 max-[1024px]:!grid-cols-2 max-[1024px]:!gap-x-5 max-[1024px]:!gap-y-3 max-[1024px]:!py-3 max-[600px]:!grid-cols-1 max-[600px]:!gap-3 max-[600px]:!py-2 max-[600px]:!pb-2">
+        <div className="footer-primary !grid grid-cols-4 items-start !gap-x-3 !gap-y-3 py-4 !pb-4 max-[1024px]:!grid-cols-2 max-[1024px]:!gap-x-5 max-[1024px]:!gap-y-3 max-[1024px]:!py-3 max-[600px]:!grid-cols-1 max-[600px]:!gap-3 max-[600px]:!py-2 max-[600px]:!pb-2">
           {/* Company Profile */}
           <section
             className="footer-profile  !m-0 flex min-w-0 flex-col items-start !gap-1"
