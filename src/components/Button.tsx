@@ -5,17 +5,17 @@ import { motion, useReducedMotion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { line, roll } from '../lib/motion';
 const MotionLink = motion.create(Link);
-interface Props { children: string; to?: string; href?: string; variant?: 'dark' | 'light' | 'outline'; className?: string; onClick?: () => void; type?: 'button' | 'submit'; disabled?: boolean }
+interface Props { children: string; to?: string; href?: string; variant?: 'dark' | 'light' | 'outline'; className?: string; onClick?: () => void; type?: 'button' | 'submit'; disabled?: boolean; target?: string; rel?: string }
 export function RollingText({ children }: { children: ReactNode }) {
   return <span className="roll-window"><motion.span className="roll-track" variants={roll}><span>{children}</span><span aria-hidden="true">{children}</span></motion.span></span>;
 }
-export function Button({ children, to, href, variant = 'dark', className = '', onClick, type = 'button', disabled }: Props) {
+export function Button({ children, to, href, variant = 'dark', className = '', onClick, type = 'button', disabled, target, rel }: Props) {
   const reduced = useReducedMotion(); const [active, setActive] = useState(false);
   const reset = () => setActive(false);
   const props = { className: `signature-button button-${variant} ${className}`, initial: 'rest', animate: active && !reduced ? 'hover' : 'rest', onMouseEnter: () => setActive(true), onMouseLeave: reset, onFocus: () => setActive(true), onBlur: reset, onClick };
   const content = <><RollingText>{children}</RollingText><ArrowUpRight aria-hidden="true" size={18} strokeWidth={1.5} /><motion.span className="interaction-underline" aria-hidden="true" variants={line} /></>;
-  if (to) return <MotionLink to={to} {...props}>{content}</MotionLink>;
-  if (href) return <motion.a href={href} {...props}>{content}</motion.a>;
+  if (to) return <MotionLink to={to} target={target} rel={rel} {...props}>{content}</MotionLink>;
+  if (href) return <motion.a href={href} target={target} rel={rel} {...props}>{content}</motion.a>;
   return <motion.button type={type} disabled={disabled} {...props}>{content}</motion.button>;
 }
 export function TextLink({ to, children, href }: { to?: string; href?: string; children: string }) {
