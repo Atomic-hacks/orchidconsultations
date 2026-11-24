@@ -22,7 +22,7 @@ export function Footer() {
               <BrandLogo className="!w-[140px]" />
             </Link>
 
-            <p className="!m-0 max-w-[290px] text-[13px] !leading-[1.3] text-[#d2d8e3] max-[1024px]:max-w-[350px] max-[600px]:max-w-full">
+            <p className="!m-0 max-w-[290px] text-[8px] !leading-[1.2] text-[#d2d8e3] max-[1024px]:max-w-[350px] max-[600px]:max-w-full">
               A fast-growing integrated financial and consulting services
               company delivering practical solutions that help businesses build,
               grow, and create lasting value.
@@ -36,7 +36,7 @@ export function Footer() {
           >
             <h2
               id="footer-quick-links"
-              className="!mb-1 !mt-0 text-[19px] !leading-[1.1] font-semibold tracking-[-0.02em] text-[#b9d79b]"
+              className="!mb-1 !mt-0 text-[9px] !leading-[1] font-extralight  tracking-[-0.02em] text-[#b9d79b]"
             >
               Quick Links
             </h2>
@@ -46,37 +46,37 @@ export function Footer() {
               aria-label="Quick links"
             >
               <Link
-                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/about"
               >
                 About Us
               </Link>
               <Link
-                className="!m-0 text-[12px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/services"
               >
                 Our Services
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/investment-calculator"
               >
                 Investment Calculator
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/team"
               >
                 Our Team
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-1 no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/event-gallery"
               >
                 Event Gallery
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-1 no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/contact"
               >
                 Contact Us
@@ -88,7 +88,7 @@ export function Footer() {
           <section className="!m-0 min-w-0" aria-labelledby="footer-policies">
             <h2
               id="footer-policies"
-              className="!mb-1 !mt-0 text-[19px] !leading-[1.1] font-semibold tracking-[-0.02em] text-[#b9d79b]"
+              className="!mb-1 !mt-0 text-[8px] !leading-[1] font-extralight tracking-[-0.02em] text-[#b9d79b]"
             >
               Legal &amp; Policies
             </h2>
@@ -98,25 +98,25 @@ export function Footer() {
               aria-label="Legal and policies"
             >
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/privacy"
               >
                 Privacy Policy
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/terms"
               >
                 Terms &amp; Conditions
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px ] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/whistleblowing"
               >
                 Whistleblowing Policy
               </Link>
               <Link
-                className="!m-0 text-[13px] !leading-[1.2] no-underline transition-opacity duration-250 hover:opacity-70"
+                className="!m-0 text-[8px] !leading-[1] no-underline transition-opacity duration-250 hover:opacity-70"
                 to="/feedback"
               >
                 Feedback &amp; Complaints
@@ -131,14 +131,14 @@ export function Footer() {
           >
             <h2
               id="footer-contact"
-              className="!mb-1 !mt-0 text-[19px] !leading-[1.1] font-semibold tracking-[-0.02em] text-[#b9d79b]"
+              className="!mb-1 !mt-0 text-[9px] !leading-[1] font-extralight tracking-[-0.02em] text-[#b9d79b]"
             >
               Contact Us
             </h2>
 
             <div className="footer-contact-details !m-0 flex flex-col !gap-1">
               <a
-                className="!m-0 flex min-w-0 items-start gap-1.5 text-[13px] !leading-[1.2] no-underline"
+                className="!m-0 flex min-w-0 items-start gap-1.5 text-[8px] !leading-[1] no-underline"
                 href={contact.maps}
                 target="_blank"
                 rel="noreferrer"
@@ -152,7 +152,7 @@ export function Footer() {
               </a>
 
               <a
-                className="!m-0 flex min-w-0 items-start gap-1.5 text-[13px] !leading-[1.2] no-underline"
+                className="!m-0 flex min-w-0 items-start gap-1.5 text-[8px] !leading-[1] no-underline"
                 href={`tel:${contact.tel}`}
               >
                 <Phone
@@ -164,7 +164,7 @@ export function Footer() {
               </a>
 
               <a
-                className="!m-0 flex min-w-0 items-start gap-1.5 text-[13px] !leading-[1.2] no-underline"
+                className="!m-0 flex min-w-0 items-start gap-1.5 text-[8px] !leading-[1] no-underline"
                 href={`mailto:${contact.email}`}
               >
                 <Mail
