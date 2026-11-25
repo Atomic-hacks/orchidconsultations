@@ -166,8 +166,8 @@ export default function About() {
               className="
           relative
           block
-          w-[150px]
-          h-[150px]
+          w-49
+          h-45
           flex-none
           overflow-hidden
           rounded-2xl
