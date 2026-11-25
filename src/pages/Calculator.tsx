@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "../components/Button";
-import { Link } from "react-router-dom";
 import {
   calculateInvestment,
   MINIMUM_INVESTMENT,
