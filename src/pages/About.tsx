@@ -87,51 +87,53 @@ export default function About() {
       />
 
       {/* Trust and Certification Section */}
+
+      {/* Trust and Certification Section */}
       <section
-        className="bg-white border-b border-[var(--line)]"
+        className="bg-white border-b border-[var(--line)] overflow-hidden"
         aria-labelledby="about-trust-title"
       >
         <Container
           className="
-            grid
-            grid-cols-[minmax(0,1fr)_auto_auto]
-            items-center
-            gap-5
-            py-7
-            max-[1100px]:grid-cols-[minmax(0,1fr)_auto]
-            max-[1100px]:gap-4
-            max-[767px]:grid-cols-1
-            max-[767px]:gap-5
-            max-[767px]:py-6
-          "
+      grid
+      grid-cols-[minmax(0,1fr)_auto_auto]
+      items-center
+      gap-6
+      py-8
+      max-[1100px]:grid-cols-[minmax(0,1fr)_auto]
+      max-[1100px]:gap-5
+      max-[1100px]:py-7
+      max-[767px]:grid-cols-1
+      max-[767px]:gap-5
+      max-[767px]:py-6
+    "
         >
           {/* Trust Information */}
           <div className="min-w-0">
             <h2
               id="about-trust-title"
               className="
-                whitespace-nowrap
-                text-[clamp(15px,1.45vw,19px)]
-                leading-[1.2]
-                font-semibold
-                tracking-[-0.035em]
-                text-(--ink)
-                max-[767px]:text-[15px]
-              "
+          whitespace-nowrap
+          text-[clamp(14px,1.5vw,19px)]
+          leading-[1.2]
+          font-semibold
+          tracking-[-0.035em]
+          text-[var(--ink)]
+          max-[767px]:text-[15px]
+        "
             >
               Licensed. Verified. Accountable.
             </h2>
 
             <p
               className="
-                max-w-[62ch]
-                mt-2
-                mb-0
-                text-[var(--slate)]
-                text-[13px]
-                leading-[1.6]
-                max-[767px]:text-[13px]
-              "
+          max-w-[62ch]
+          mt-2
+          mb-0
+          text-[var(--slate)]
+          text-[13px]
+          leading-[1.6]
+        "
             >
               Orchiddigital operates in full regulatory compliance as a licensed
               money lending company and SCUML-certified.
@@ -141,53 +143,68 @@ export default function About() {
           {/* Certification Image */}
           <figure
             className="
-              flex
-              items-center
-              gap-3
-              m-0
-              pl-5
-              border-l
-              border-[var(--line)]
-              max-[1100px]:row-start-2
-              max-[1100px]:col-span-full
-              max-[1100px]:pl-0
-              max-[1100px]:border-l-0
-              max-[1100px]:pt-4
-              max-[1100px]:border-t
-              max-[767px]:row-auto
-              max-[767px]:col-auto
-            "
+        flex
+        items-center
+        gap-4
+        m-0
+        pl-6
+        border-l
+        border-[var(--line)]
+        max-[1100px]:row-start-2
+        max-[1100px]:col-span-full
+        max-[1100px]:pl-0
+        max-[1100px]:border-l-0
+        max-[1100px]:pt-5
+        max-[1100px]:border-t
+        max-[767px]:row-auto
+        max-[767px]:col-auto
+        max-[767px]:pt-0
+        max-[767px]:border-t-0
+      "
           >
             <span
               className="
-                block
-                w-[100px]
-                h-[100px]
-                flex-none
-                overflow-hidden
-                rounded-full
-                bg-white
-                max-[767px]:w-[85px]
-                max-[767px]:h-[85px]
-              "
+          relative
+          block
+          w-[150px]
+          h-[150px]
+          flex-none
+          overflow-hidden
+          rounded-2xl
+          bg-white
+          border
+          border-[var(--line)]
+          shadow-[0_12px_30px_rgba(0,0,0,0.13)]
+          ring-4
+          ring-[#b9d79b]/30
+          transition-transform
+          duration-300
+          hover:scale-[1.04]
+          max-[767px]:w-[125px]
+          max-[767px]:h-[125px]
+        "
             >
               <img
                 src="/license.jpg"
                 alt="Money Lending License and SCUML certification"
-                width="1280"
-                height="1280"
-                className="block w-full h-full object-cover scale-[1.45]"
+                className="
+            block
+            w-full
+            h-full
+            object-contain
+            p-1
+          "
               />
             </span>
 
             <figcaption
               className="
-                max-w-[16ch]
-                text-[var(--ink)]
-                text-[12px]
-                leading-[1.4]
-                font-semibold
-              "
+          max-w-[18ch]
+          text-[var(--ink)]
+          text-[13px]
+          leading-[1.5]
+          font-semibold
+        "
             >
               Money Lending License &amp; SCUML Certified
             </figcaption>
@@ -196,20 +213,21 @@ export default function About() {
           {/* Action Buttons */}
           <div
             className="
-              flex
-              items-center
-              justify-end
-              gap-2
-              max-[1100px]:col-start-2
-              max-[1100px]:row-start-1
-              max-[1100px]:flex-wrap
-              max-[767px]:col-auto
-              max-[767px]:row-auto
-              max-[767px]:grid
-              max-[767px]:grid-cols-1
-              [&_.signature-button]:whitespace-nowrap
-              max-[767px]:[&_.signature-button]:w-full
-            "
+        flex
+        items-center
+        justify-end
+        gap-2
+        max-[1100px]:col-start-2
+        max-[1100px]:row-start-1
+        max-[1100px]:flex-wrap
+        max-[767px]:col-auto
+        max-[767px]:row-auto
+        max-[767px]:grid
+        max-[767px]:grid-cols-1
+        max-[767px]:w-full
+        [&_.signature-button]:whitespace-nowrap
+        max-[767px]:[&_.signature-button]:w-full
+      "
             aria-label="Choose how to work with Orchid"
           >
             <Button to="/contact?service=access-to-finance">
@@ -227,8 +245,9 @@ export default function About() {
       <Section>
         <Container
           className="
-            grid
-            grid-cols-[repeat(12,minmax(0,1fr))]
+            flex
+            justify-center
+            flex-row
             gap-8
             items-center
             max-[767px]:block
@@ -251,7 +270,7 @@ export default function About() {
             <div
               className="
                 grid
-                gap-[14px]
+                gap-9
                 max-w-[62ch]
                 -mt-2
                 max-[767px]:gap-3
